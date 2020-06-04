@@ -36,6 +36,9 @@
           <template v-if="!$v.email.maxLength">Слишком длинный E-mail</template>
           <template v-else-if="!$v.email.email">Некорректный email</template>
           <template v-if="!$v.email.required">Это поле обязательно для заполнения.</template>
+          <div
+            class="singin__err text__heading_size_h3"
+          >{{ errArray['email'] ? errArray['email'].toString() : '' }}</div>
         </span>
         <input
           type="email"
@@ -53,6 +56,9 @@
             {{ $v.password.$params.minLength.min }} символов
           </template>
           <template v-if="!$v.password.maxLength">Слишком длинный пароль</template>
+          <template
+            v-else-if="!$v.first_name.alpha"
+          >Имя должно содержать латинские или русские буквы.</template>
           <template v-if="!$v.password.required">Это поле обязательно для заполнения.</template>
         </span>
         <input
@@ -118,9 +124,10 @@
         class="singup__err text__heading_size_h3"
         @click="$v.checked_policy.$touch()"
       >
-        <template
-          v-if="!$v.checked_policy.mustBeChecked"
-        >Необходимо указать, что вы согласны с политикой конфиденциальности</template>
+        <template v-if="!$v.checked_policy.mustBeChecked">
+          Необходимо указать, что вы согласны с политикой
+          конфиденциальности
+        </template>
       </span>
 
       <label class="check option-check">
@@ -183,7 +190,7 @@ export default {
     first_name: {
       required,
       minLength: minLength(2),
-      maxLength: maxLength(60),
+      maxLength: maxLength(256),
       alpha: val => /^[a-zа-яё'\s\-]*$/i.test(val)
     },
     email: {
@@ -196,6 +203,7 @@ export default {
       required,
       minLength: minLength(8),
       maxLength: maxLength(32)
+      // alpha: val => /^[a-zа-яё'\s\-\.]*$/i.test(val)
     },
     password_confirmation: {
       required,

@@ -37,7 +37,16 @@
             >О сервисе</router-link>
           </li>
           <li class="footer-block__menu-item">
-            <a class="footer-block__menu-link_team_gray text__heading_size_m" href="#">Направления</a>
+            <router-link
+              class="footer-block__menu-link_team_gray text__heading_size_m"
+              :to="{ name: 'ourTrainers' }"
+            >Наши тренеры</router-link>
+          </li>
+          <li class="footer-block__menu-item">
+            <a
+              class="footer-block__menu-link_team_gray text__heading_size_m"
+              href="#"
+            >Виды тренировок</a>
           </li>
           <li class="footer-block__menu-item">
             <a

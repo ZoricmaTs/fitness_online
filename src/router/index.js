@@ -143,7 +143,7 @@ const routes = [
 
 const router = new VueRouter({
   routes,
-  mode: 'history',
+  // mode: 'history',
   linkActiveClass: 'active', // помечать активными ссылками
   linkExactActiveClass: 'exact-active'
 })

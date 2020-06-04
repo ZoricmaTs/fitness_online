@@ -44,11 +44,9 @@
               v-model="password"
             />
             <button class="singin__input-passbtn" @click="showPassword = !showPassword">
-              <i class="material-icons singin__icon">
-                {{
-                showPassword ? 'visibility' : 'visibility_off'
-                }}
-              </i>
+              <i
+                class="material-icons singin__icon"
+              >{{ showPassword ? 'visibility' : 'visibility_off' }}</i>
             </button>
           </div>
           <div class="singin__block-btn">
@@ -138,7 +136,7 @@ export default {
         } else {
           if (response.data.database_error.indexOf('is incorrect') != -1) {
             this.errArray = {
-              email: ['Неверный логин или пароль']
+              email: ['Неверный пароль']
             }
           }
           if (response.data.database_error.indexOf('is not confirmed') != -1) {
