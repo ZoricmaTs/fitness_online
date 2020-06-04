@@ -118,9 +118,10 @@
         class="singup__err text__heading_size_h3"
         @click="$v.checked_policy.$touch()"
       >
-        <template
-          v-if="!$v.checked_policy.mustBeChecked"
-        >Необходимо указать, что вы согласны с политикой конфиденциальности</template>
+        <template v-if="!$v.checked_policy.mustBeChecked">
+          Необходимо указать, что вы согласны с политикой
+          конфиденциальности
+        </template>
       </span>
 
       <label class="check option-check">
@@ -228,25 +229,7 @@ export default {
           if (response.data.success == true) {
             localStorage.token = response.data.token
             localStorage.email = response.data.email
-            let confirmation_code = '123456'
-            AuthorizationService.confirmAccount(
-              this.email,
-              confirmation_code,
-              response.data.token
-            ).then(response => {
-              AuthorizationService.login(this.email, this.password).then(
-                response => {
-                  if (response.data.success == true) {
-                    const userI = response.data
-                    localStorage.token = response.data.token
-                    localStorage.email = this.email
-                    localStorage.role = response.data.role
-                    localStorage.user_id = response.data.user_id
-                    this.onRegister()
-                  }
-                }
-              )
-            })
+            this.onRegister()
           } else {
             if (response.data.database_error.indexOf('already exists') != -1) {
               this.errArray = { email: ['Такой пользователь уже существует'] }

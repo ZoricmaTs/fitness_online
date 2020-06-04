@@ -26,6 +26,12 @@ Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/email_confirmation',
+    name: 'email_confirmation', //для роутеров
+    component: EmailConfirmation,
+    props: route => ({ email: route.query.email, code: route.query.code })
+  },
+  {
     path: '/',
     name: 'Home',
     component: Home
@@ -40,6 +46,7 @@ const routes = [
     name: 'signup',
     component: Register
   },
+
   {
     path: '/termsofservice',
     name: 'termsofservice',
@@ -131,17 +138,12 @@ const routes = [
     name: 'questionsTrainer',
     component: QuestionsTrainer,
     props: true
-  },
-  {
-    path: '/email_confirmation',
-    name: 'email_confirmation', //для роутеров
-    component: EmailConfirmation,
-    props: route => ({ email: route.query.email, code: route.query.code })
   }
 ]
 
 const router = new VueRouter({
   routes,
+  mode: 'history',
   linkActiveClass: 'active', // помечать активными ссылками
   linkExactActiveClass: 'exact-active'
 })

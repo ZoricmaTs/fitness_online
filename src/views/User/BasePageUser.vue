@@ -34,9 +34,9 @@ export default {
     // FooterBase
   },
   created() {
-    if (localStorage.token == '') {
-      this.$router.push({ name: 'Home' })
-    }
+    // if (localStorage.token == '') {
+    //   this.$router.push({ name: 'Home' })
+    // }
   }
 }
 </script>

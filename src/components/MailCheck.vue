@@ -10,9 +10,11 @@
     <span slot="header" class="form-modal-info__heading text__heading_size_h2">Поздравляем!</span>
     <div class slot="body">
       <div class="form-modal-info__text-block">
-        <p
-          class="form-modal-info__text text__heading_size_h2"
-        >Вы успешно зарегистрированы в приложении “Fitness-online”</p>
+        <p class="form-modal-info__text text__heading_size_h2">
+          Вы успешно зарегистрированы в приложении “Fitness-online” Вашу
+          учетную запись необходимо активировать, для этого перейдите по
+          ссылке, указанной в письме” и ссылкой для активации учетной записи.
+        </p>
       </div>
     </div>
   </ModalInfo>
@@ -33,17 +35,18 @@ export default {
 
   methods: {
     onClose() {
-      if (localStorage.role == 'trainer') {
-        this.$router.push({
-          name: 'aboutserviceTrainer',
-          params: { id: localStorage.user_id }
-        })
-      } else {
-        this.$router.push({
-          name: 'aboutserviceUser',
-          params: { id: localStorage.user_id }
-        })
-      }
+      this.$emit('close')
+      // if (localStorage.role == 'trainer') {
+      //   this.$router.push({
+      //     name: 'aboutserviceTrainer',
+      //     params: { id: localStorage.user_id }
+      //   })
+      // } else {
+      //   this.$router.push({
+      //     name: 'aboutserviceUser',
+      //     params: { id: localStorage.user_id }
+      //   })
+      // }
     }
   }
 }
