@@ -1,7 +1,7 @@
 <template>
   <div class="bg-color">
     <BasePageUser>
-      <div>
+      <div class="page__block-height">
         <SettingProfile />
       </div>
     </BasePageUser>
