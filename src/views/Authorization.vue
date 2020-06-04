@@ -1,5 +1,5 @@
 <template>
-  <section class="singin-bg block-grid">
+  <section class="singin-bg">
     <router-link :to="{ name: 'Home' }" class="singin__linkback text__heading_size_l">
       <img src="../assets/img/Arrow.svg" alt="backlink" />
       Назад
@@ -44,9 +44,11 @@
               v-model="password"
             />
             <button class="singin__input-passbtn" @click="showPassword = !showPassword">
-              <i
-                class="material-icons singin__icon"
-              >{{ showPassword ? 'visibility' : 'visibility_off' }}</i>
+              <i class="material-icons singin__icon">
+                {{
+                showPassword ? 'visibility' : 'visibility_off'
+                }}
+              </i>
             </button>
           </div>
           <div class="singin__block-btn">

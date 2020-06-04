@@ -1,5 +1,5 @@
 <template>
-  <section class="singup-bg block-grid">
+  <section class="singup-bg">
     <router-link :to="{ name: 'Home' }" class="singin__linkback text__heading_size_l">
       <img src="../assets/img/Arrow.svg" alt="backlink" />
       Назад
@@ -118,10 +118,9 @@
         class="singup__err text__heading_size_h3"
         @click="$v.checked_policy.$touch()"
       >
-        <template v-if="!$v.checked_policy.mustBeChecked">
-          Необходимо указать, что вы согласны с политикой
-          конфиденциальности
-        </template>
+        <template
+          v-if="!$v.checked_policy.mustBeChecked"
+        >Необходимо указать, что вы согласны с политикой конфиденциальности</template>
       </span>
 
       <label class="check option-check">
