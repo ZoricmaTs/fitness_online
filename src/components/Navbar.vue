@@ -15,10 +15,8 @@
         <li class="navb__item">
           <router-link class="navb__item navb__link" :to="{ name: 'contacts' }">Контакты</router-link>
         </li>
-        <li class="navb__item">
-          <router-link class="navb__item navb__link" :to="{ name: 'signin' }">Вход</router-link>
-        </li>
       </ul>
+      <router-link class="navb__item navb__link" :to="{ name: 'signin' }">Вход</router-link>
     </nav>
   </header>
 </template>
