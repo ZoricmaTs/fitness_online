@@ -31,9 +31,6 @@ body {
   }
 }
 
-@media (min-width: 700px) and (max-width: 1199px) {
-}
-
 .grid::before {
   position: fixed;
   top: 0;
@@ -66,18 +63,39 @@ body {
 
   background-repeat: no-repeat;
 }
-
-@media (min-width: 736px) {
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media (max-width: 735px) {
+  .grid::before {
+    --grid-sides: 20px;
+    --grid-columns: 4;
+  }
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 736px) and (max-width: 1007px) {
   .grid::before {
     --grid-sides: 20px;
     --grid-columns: 8;
   }
-}
-
-@media (min-width: 1008px) {
-  .grid::before {
-    --grid-sides: 20px;
-    --grid-columns: 12;
+  .grid {
+    grid-template-columns: repeat(8, 1fr);
   }
 }
+
+// @media (min-width: 1008px) {
+//   .grid::before {
+//     --grid-sides: 20px;
+//     --grid-columns: 12;
+//   }
+//   .grid {
+//     grid-template-columns: repeat(12, 1fr);
+//   }
+// }
 </style>

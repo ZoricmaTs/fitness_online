@@ -1,7 +1,12 @@
 <template>
   <header class="grid">
-    <h1 class="logo__navb grid-navb">Fitness</h1>
-    <nav class="navb text__heading_size_m">
+    <div class="first">лого</div>
+    <div class="second">меню</div>
+    <div class="fird">выход</div>
+    <!--<div class="grid-navb__logo">
+      <h1 class="logo__navb">Fitness</h1>
+    </div>
+    <nav class="grid-navb__navb navb text__heading_size_m">
       <ul class="navb__list">
         <li class="navb__item">
           <a href="#about-service" class="navb__link">О сервисе</a>
@@ -17,10 +22,10 @@
         </li>
       </ul>
     </nav>
-    <router-link class="exit-block" :to="{ name: 'signin' }">
+    <router-link class="grid-navb__exit exit-block" :to="{ name: 'signin' }">
       <div class="exit-block__text">Вход</div>
       <img class="exit-block__btn" src="../assets/img/exit-white.svg" />
-    </router-link>
+    </router-link>-->
   </header>
 </template>
 
