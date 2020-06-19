@@ -6,6 +6,7 @@ $font-size-40: 2.5rem; // 40
 $font-size-24: 1.5rem; // 24
 $font-size-body20: 1.25rem; //20
 $font-size-18: 1.125rem; //18
+$font-size-body16: 1rem; //14 body
 $font-size-body14: 0.875rem; //14 body
 $font-size-body12: 0.75rem;
 $color-dark-gray: #312829;
@@ -33,9 +34,12 @@ $color-dark-blue: #039792;
   @include font-size($font-size-body20);
 }
 .text__heading_size_m {
-  @include font-size($font-size-body14);
+  @include font-size($font-size-body16);
 }
 .text__heading_size_s {
+  @include font-size($font-size-body14);
+}
+.text__heading_size_xs {
   @include font-size($font-size-body12);
 }
 

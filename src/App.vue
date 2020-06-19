@@ -26,14 +26,20 @@ body {
 .block-grid {
   padding-left: 20px;
   padding-right: 20px;
+  &__left {
+    padding-left: 173.3px;
+  }
 }
 .block-grid-min {
   padding-left: 238px;
   padding-right: 238px;
   background-color: $color-blue;
 }
+
 .bg-color {
   background-color: $color-blue;
   height: 100vh;
+}
+@media (min-width: 700px) and (max-width: 1199px) {
 }
 </style>

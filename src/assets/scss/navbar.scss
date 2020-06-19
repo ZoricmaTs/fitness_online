@@ -51,10 +51,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  min-height: 100vh;
+  min-height: 774px;
 }
 .text-title {
-  position: absolute;
+  // position: absolute;
   font-style: normal;
   font-weight: 600;
   @include font-size(90px);
@@ -62,11 +62,18 @@
   color: #e9e9e9;
   max-width: 518px;
   max-height: 318px;
-  top: calc(50% - 318px / 2 - 66.5px);
+  margin-top: 100px;
+  margin-bottom: 60px;
+  // top: calc(50% - 318px / 2 - 25px);
+  // calc(50% - 318px/2 - 25px);
+  &__color_green {
+    color: #05ad5c;
+  }
 }
 .title-link {
-  position: absolute;
-  top: calc(50% - 73px / 2 + 189px);
+  // position: absolute;
+  margin-bottom: 105px;
+  // top: calc(50% - 73px / 2 + 230.5px);
 }
 //navbar----------------------------------------------------------------------
 .navb__auth {
@@ -128,13 +135,20 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  width: 157px;
-  font-style: normal;
-  font-weight: 500;
-  @include font-size(16px);
-  line-height: 19px;
+  justify-content: center;
+  max-width: 65px;
+  height: 24px;
+  color: #e9e9e9;
+  text-decoration: none;
+  padding: 18px;
+  &:focus,
+  &:hover {
+    color: #20194b;
+    background-color: #05ad5c;
+    text-decoration: none;
+  }
   &__text {
+    margin-right: 8px;
   }
   &__btn {
     cursor: pointer;

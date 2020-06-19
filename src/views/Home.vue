@@ -2,15 +2,16 @@
   <section class="page">
     <section class="navb-block-title">
       <Navbar />
-      <section class="title-img" id="title-home">
+      <section class="title-img block-grid__left" id="title-home">
         <div class="title-img-block">
-          <h1 class="text-title">Тренируйся не выходя из дома</h1>
-          <router-link :to="{ name: 'signup' }">
-            <a
-              href="#training-online"
-              class="text__heading_size_h2 title-link btn__title btn__title_color_green btn__link"
-            >Приступить к тренировке</a>
-          </router-link>
+          <h1 class="text-title">
+            Тренируйся не выходя из
+            <span class="text-title__color_green">дома</span>
+          </h1>
+          <a
+            href="#training-online"
+            class="text__heading_size_h2 title-link btn__title btn__title_color_green btn__link"
+          >Приступить к тренировке</a>
         </div>
       </section>
     </section>

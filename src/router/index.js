@@ -31,6 +31,16 @@ const routes = [
     component: TermsOfService
   },
   {
+    path: '/schedule',
+    name: 'schedule',
+    component: TermsOfService
+  },
+  {
+    path: '/contacts',
+    name: 'contacts',
+    component: TermsOfService
+  },
+  {
     path: '/email_confirmation',
     name: 'email_confirmation', //для роутеров
     component: EmailConfirmation,
