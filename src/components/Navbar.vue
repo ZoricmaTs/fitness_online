@@ -1,9 +1,6 @@
 <template>
   <header class="grid">
-    <div class="first">лого</div>
-    <div class="second">меню</div>
-    <div class="fird">выход</div>
-    <!--<div class="grid-navb__logo">
+    <div class="grid-navb__logo">
       <h1 class="logo__navb">Fitness</h1>
     </div>
     <nav class="grid-navb__navb navb text__heading_size_m">
@@ -15,17 +12,21 @@
           <a href="#trainings" class="navb__link">Тренировки</a>
         </li>
         <li class="navb__item">
-          <router-link class="navb__link" :to="{ name: 'schedule' }">Расписание</router-link>
+          <router-link class="navb__link" :to="{ name: 'schedule' }"
+            >Расписание</router-link
+          >
         </li>
         <li class="navb__item">
-          <router-link class="navb__link" :to="{ name: 'contacts' }">Контакты</router-link>
+          <router-link class="navb__link" :to="{ name: 'contacts' }"
+            >Контакты</router-link
+          >
         </li>
       </ul>
     </nav>
     <router-link class="grid-navb__exit exit-block" :to="{ name: 'signin' }">
       <div class="exit-block__text">Вход</div>
       <img class="exit-block__btn" src="../assets/img/exit-white.svg" />
-    </router-link>-->
+    </router-link>
   </header>
 </template>
 

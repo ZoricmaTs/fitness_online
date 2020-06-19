@@ -70,13 +70,11 @@ body {
   margin-left: 20px;
   margin-right: 20px;
 }
+
 @media (min-width: 1008px) {
   .grid::before {
     --grid-sides: 20px;
     --grid-columns: 12;
-  }
-  .grid {
-    grid-template-columns: repeat(12, 1fr);
   }
 }
 @media (min-width: 736px) and (max-width: 1007px) {
@@ -88,7 +86,7 @@ body {
     grid-template-columns: repeat(8, 1fr);
   }
 }
-@media (max-width: 735px) {
+@media (min-width: 320px) and (max-width: 735px) {
   .grid::before {
     --grid-sides: 20px;
     --grid-columns: 4;
