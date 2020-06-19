@@ -2,8 +2,8 @@
   <section class="page">
     <section class="navb-block-title">
       <Navbar />
-      <section class="title-img block-grid__left" id="title-home">
-        <div class="title-img-block">
+      <section class="title-img" id="title-home">
+        <div class="title-img-block grid">
           <h1 class="text-title">
             Тренируйся не выходя из
             <span class="text-title__color_green">дома</span>

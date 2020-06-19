@@ -21,14 +21,6 @@ body {
 * {
   margin: 0;
   padding: 0;
-  //line-height: 0;
-}
-.block-grid {
-  padding-left: 20px;
-  padding-right: 20px;
-  &__left {
-    padding-left: 173.3px;
-  }
 }
 
 .grid::before {
