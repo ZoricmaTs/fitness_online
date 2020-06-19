@@ -1,6 +1,6 @@
 <template>
-  <header class="block-grid navb-block">
-    <h1 class="logo__navb block-grid__left">Fitness</h1>
+  <header class="grid">
+    <h1 class="logo__navb grid-navb">Fitness</h1>
     <nav class="navb text__heading_size_m">
       <ul class="navb__list">
         <li class="navb__item">
