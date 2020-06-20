@@ -62,15 +62,15 @@
       border: $color-dark-orange solid 2px;
     }
   }
-  &__title_color_transp-orange {
-    border: 2px solid $color-orange;
-    color: $color-black;
+  &__title_color_transp-green {
+    border: 2px solid #05ad5c;
+    color: #20194b;
     background-color: transparent;
     cursor: pointer;
     &:focus,
     &:hover {
       border-radius: 0 !important;
-      border: $color-dark-orange solid 2px;
+      border: #3c9a6d solid 2px;
     }
   }
   //--------

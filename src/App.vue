@@ -12,6 +12,8 @@
 @import '@/assets/scss/btn.scss';
 @import '@/assets/scss/footer.scss';
 @import '@/assets/scss/service.scss';
+@import '@/assets/scss/streamvideo.scss';
+
 body {
   font-family: 'Raleway', sans-serif;
   font-style: normal;

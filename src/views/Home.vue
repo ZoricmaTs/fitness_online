@@ -62,7 +62,35 @@
         </div>
       </div>
     </section>
-
+    <section class="home-page-stream">
+      <h1 class="home-page-stream__heading text__heading_size_h1">Сейчас в эфире</h1>
+      <div class="home-page-stream__card card-training">
+        <h1 class="home-page-stream__card-heading card-training__name">Шейпинг</h1>
+        <div class="home-page-stream__card-trainer card-training__trainer">
+          <div class="home-page-stream__card-trainerblock card-training__trainerblock">
+            <img
+              class="home-page-stream__card-trainer-img card-training__trainerimg"
+              src="../assets/img/avatar.png"
+              alt="avatar"
+              height="60"
+              width="60"
+            />
+            <p class="home-page-stream__card-text card-training__text">
+              Тренер
+              <span
+                class="home-page-stream__card-trainer-name card-training__trainer-name"
+              >Алина Мронова</span>
+            </p>
+          </div>
+        </div>
+        <a
+          class="card-training__btn text__heading_size_h3 btn__title btn__title_color_green btn__link"
+        >Приступить к тренировке</a>
+        <a
+          class="text__heading_size_h3 btn__title btn__title_color_transp-green btn__link"
+        >Расписание тренера</a>
+      </div>
+    </section>
     <Footer />
   </section>
 </template>
