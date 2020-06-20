@@ -116,3 +116,14 @@
     justify-content: space-between;
   }
 }
+
+@media (min-width: 736px) and (max-width: 1007px) {
+  .btn {
+    &__big {
+      padding: 10px;
+    }
+    &__title {
+      padding: 10px;
+    }
+  }
+}

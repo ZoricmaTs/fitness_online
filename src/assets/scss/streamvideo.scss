@@ -30,6 +30,7 @@
   &__card {
     grid-column: 2/6;
     grid-row: 2/2;
+    margin-bottom: 60px;
   }
 }
 .card-training {
@@ -72,4 +73,38 @@
     @include font-size(18px);
     line-height: 21px;
   }
+}
+
+@media (min-width: 1008px) and (max-width: 1300px) {
+}
+@media (min-width: 736px) and (max-width: 1007px) {
+  .home-page-stream {
+    &__current-video {
+      grid-column: 5/9;
+      grid-row: 2/2;
+    }
+    &__heading {
+      grid-column: 1/9;
+      grid-row: 1/1;
+    }
+    &__card {
+      grid-column: 1/5;
+      grid-row: 2/2;
+      margin-bottom: 30px;
+    }
+  }
+  .card-training {
+    padding: 10px 20px 15px 20px;
+    &__trainerblock {
+      //   margin-bottom: 15px;
+    }
+    &__btn {
+      margin-bottom: 15px;
+    }
+    &__name {
+      margin-bottom: 15px;
+    }
+  }
+}
+@media (min-width: 320px) and (max-width: 735px) {
 }
