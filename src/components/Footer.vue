@@ -64,6 +64,7 @@
       <!-- </div> -->
     </section>
     <section class="footer-blockcopy grid">
+      <img class="footer-blockcopy__line" src="../assets/img/Line.png" height="1" />
       <p
         class="footer-blockcopy__text footer-blockcopy__text_team_gray text__heading_size_m"
       >Copyright © 2020</p>
