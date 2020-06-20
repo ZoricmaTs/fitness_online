@@ -1,6 +1,6 @@
 <template>
   <footer class="footer-block__color_gray footer">
-    <section class="footer-block">
+    <section class="footer-block grid">
       <div class="footer-block__logo">
         <h1 class="logo__footer">Fitness</h1>
         <p class="footer-block__text">
@@ -19,37 +19,34 @@
         </p>
         <ul class="footer-block__menu-list">
           <li class="footer-block__menu-item">
-            <router-link
+            <a
               class="footer-block__menu-link_team_gray text__heading_size_m"
-              :to="{ name: 'signup' }"
-            >Регистрация</router-link>
+              href="#about-service"
+            >О сервисе</a>
+          </li>
+          <li class="footer-block__menu-item">
+            <a
+              href="#trainings"
+              class="footer-block__menu-link_team_gray text__heading_size_m"
+            >Тренировки</a>
           </li>
           <li class="footer-block__menu-item">
             <router-link
               class="footer-block__menu-link_team_gray text__heading_size_m"
-              :to="{ name: 'signin' }"
-            >Вход</router-link>
+              :to="{ name: 'schedule' }"
+            >Расписание</router-link>
           </li>
           <li class="footer-block__menu-item">
-            <router-link
+            <a
               class="footer-block__menu-link_team_gray text__heading_size_m"
-              :to="{ name: 'aboutservice' }"
-            >О сервисе</router-link>
-          </li>
-          <li class="footer-block__menu-item">
-            <a class="footer-block__menu-link_team_gray text__heading_size_m" href="#">Направления</a>
+              :to="{ name: 'contacts' }"
+            >Контакты</a>
           </li>
           <li class="footer-block__menu-item">
             <a
               class="footer-block__menu-link_team_gray text__heading_size_m"
               href="#"
             >Вопросы и ответы</a>
-          </li>
-          <li class="footer-block__menu-item">
-            <router-link
-              class="footer-block__menu-link_team_gray text__heading_size_m"
-              :to="{ name: 'contactdetail' }"
-            >Контакты</router-link>
           </li>
         </ul>
       </div>
