@@ -22,7 +22,7 @@
   &__menu {
     grid-column: 6/8;
     grid-row: 1/1;
-    width: 135px;
+    max-width: 135px;
   }
   &__inst {
     grid-column: 8/10;
@@ -48,7 +48,7 @@
     line-height: 15px;
     @include font-size(13px);
     color: #e9e9e9;
-    width: 188px;
+    max-width: 188px;
     margin-bottom: 30px;
   }
   &__link-email {
@@ -151,7 +151,7 @@
       grid-column: 2/4;
     }
     &__text {
-      width: 175px;
+      max-width: 175px;
     }
 
     &__menu {
@@ -194,7 +194,7 @@
     }
     &__menu {
       grid-column: 2/2;
-      width: 106px;
+      max-width: 540px;
     }
 
     &__menu-heading {
@@ -223,7 +223,7 @@
       margin-bottom: 30px;
     }
     &__text {
-      width: 355px;
+      max-width: 355px;
       margin-bottom: 10px;
     }
     &__menu {
@@ -232,15 +232,20 @@
     }
     &__menu-list {
       display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 540px;
     }
+    &__menu-item {
+      margin-right: 10px;
+    }
+
     &__inst {
       grid-column: 1/4;
       grid-row: 3/3;
     }
     &__menu-heading {
       width: 138px;
+      margin-bottom: 10px;
     }
     &__inst-img {
       width: 294px;
@@ -255,5 +260,9 @@
     &__img:nth-child(3) {
       margin-bottom: 10px;
     }
+  }
+  .footer-block__menu {
+    max-width: 540px !important;
+    margin-bottom: 30px;
   }
 }

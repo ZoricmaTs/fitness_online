@@ -208,6 +208,10 @@
       grid-row: 1/1;
     }
   }
+  .logo__navb::after {
+    bottom: 4px;
+    right: -25px;
+  }
   .text-title {
     grid-column: 1/8;
     grid-row: 1/1;
@@ -219,6 +223,15 @@
     grid-column: 1/8;
     grid-row: 2/2;
     margin-bottom: 40px;
+  }
+  .exit-block {
+    width: 34px;
+    &__text {
+      margin-right: 2px;
+    }
+  }
+  .navb__link {
+    padding: 10px;
   }
 }
 
@@ -232,7 +245,6 @@
   .logo__footer::after {
     bottom: 15px;
     right: 12px;
-
   }
   .logo__navb::after {
     bottom: 8px;
