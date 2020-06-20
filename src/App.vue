@@ -11,6 +11,7 @@
 @import '@/assets/scss/page-style.scss';
 @import '@/assets/scss/btn.scss';
 @import '@/assets/scss/footer.scss';
+@import '@/assets/scss/service.scss';
 body {
   font-family: 'Raleway', sans-serif;
   font-style: normal;
@@ -32,7 +33,7 @@ body {
   content: '';
   pointer-events: none;
 
-  --grid-color: rgb(255 0 0 / 0.1);
+  --grid-color: rgb(255 0 0 / 0.1); //rgb(255 0 0 / 0.1); //none
   --grid-sides: 20px;
   --grid-gutter: 20px;
   --grid-columns: 4;
