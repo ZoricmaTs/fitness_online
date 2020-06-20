@@ -63,33 +63,50 @@
       </div>
     </section>
     <section class="home-page-stream">
-      <h1 class="home-page-stream__heading text__heading_size_h1">Сейчас в эфире</h1>
-      <div class="home-page-stream__card card-training">
-        <h1 class="home-page-stream__card-heading card-training__name">Шейпинг</h1>
-        <div class="home-page-stream__card-trainer card-training__trainer">
-          <div class="home-page-stream__card-trainerblock card-training__trainerblock">
-            <img
-              class="home-page-stream__card-trainer-img card-training__trainerimg"
-              src="../assets/img/avatar.png"
-              alt="avatar"
-              height="60"
-              width="60"
-            />
-            <p class="home-page-stream__card-text card-training__text">
-              Тренер
-              <span
-                class="home-page-stream__card-trainer-name card-training__trainer-name"
-              >Алина Мронова</span>
-            </p>
+      <section class="grid">
+        <h1 class="home-page-stream__heading text__heading_size_h1">
+          Сейчас в эфире
+          <div class="home-page-stream__status-stream"></div>
+        </h1>
+        <div class="home-page-stream__card card-training">
+          <h1 class="card-training__name">Шейпинг</h1>
+          <div class="card-training__trainer">
+            <div class="home-page-stream__card-trainerblock card-training__trainerblock">
+              <img
+                class="home-page-stream__card-trainer-img card-training__trainerimg"
+                src="../assets/img/avatar.png"
+                alt="avatar"
+                height="60"
+                width="60"
+              />
+              <p class="card-training__text">
+                Тренер
+                <span class="card-training__trainer-name">Алина Мронова</span>
+              </p>
+            </div>
           </div>
+          <a
+            class="card-training__btn text__heading_size_h3 btn__title btn__title_color_green btn__link"
+          >Приступить к тренировке</a>
+          <a
+            class="text__heading_size_h3 btn__title btn__title_color_transp-green btn__link"
+          >Расписание тренера</a>
         </div>
-        <a
-          class="card-training__btn text__heading_size_h3 btn__title btn__title_color_green btn__link"
-        >Приступить к тренировке</a>
-        <a
-          class="text__heading_size_h3 btn__title btn__title_color_transp-green btn__link"
-        >Расписание тренера</a>
-      </div>
+        <iframe
+          class="home-page-stream__current-video card-training__trainerblock"
+          frameborder="1"
+          src="https://www.youtube-nocookie.com/embed/cmsH6by2GAo?autoplay=0&amp;rel=0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <!-- <iframe
+        allowfullscreen
+        frameborder="0"
+        height="360"
+        src="//www.youtube.com/embed/live_stream?channel=UCjXYQ1YhutGpzXvQJctzvAQ&autoplay=1"
+        width="640"
+        ></iframe>-->
+      </section>
     </section>
     <Footer />
   </section>
