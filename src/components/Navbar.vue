@@ -1,7 +1,7 @@
 <template>
   <header class="grid">
     <div class="grid-navb__logo">
-      <h1 class="logo__navb">Fitness</h1>
+      <router-link :to="{ name: 'Home' }" class="logo__navb">Fitness</router-link>
     </div>
     <nav class="grid-navb__navb navb text__heading_size_m">
       <ul class="navb__list">
