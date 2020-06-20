@@ -11,17 +11,22 @@
           <a
             href="#training-online"
             class="text__heading_size_h2 title-link btn__title btn__title_color_green btn__link"
-          >Приступить к тренировке</a>
+            >Приступить к тренировке</a
+          >
         </div>
       </section>
     </section>
     <section class="home-page-serv" id="about-service">
-      <h1 class="home-page-serv__heading text__heading_size_h1">Что предлагает наш сервис</h1>
+      <h1 class="home-page-serv__heading text__heading_size_h1">
+        Что предлагает наш сервис
+      </h1>
       <div class="home-page-serv__cards grid">
         <div class="home-page-serv__card">
           <img class="home-page-serv__card-img" src="../assets/img/1serv.svg" />
           <div class="home-page-serv__card-text">
-            <h2 class="home-page-serv__card-heading text__heading_size_h2">Отслеживай прогресс</h2>
+            <h2 class="home-page-serv__card-heading text__heading_size_h2">
+              Отслеживай прогресс
+            </h2>
             <p class="home-page-serv__card-body text__heading_size_m">
               После каждой тренировки получайте очки прогресса и узнавайте
               сколько калорий вы сожгли
@@ -31,9 +36,9 @@
         <div class="home-page-serv__card">
           <img class="home-page-serv__card-img" src="../assets/img/2serv.svg" />
           <div class="home-page-serv__card-text">
-            <h2
-              class="home-page-serv__card-heading text__heading_size_h2"
-            >Тренируйся в группе или индивидуально</h2>
+            <h2 class="home-page-serv__card-heading text__heading_size_h2">
+              Тренируйся в группе или индивидуально
+            </h2>
             <p class="home-page-serv__card-body text__heading_size_m">
               Наш сервис предлагает возможность заниматься в группе, либо
               индивидуально с тренером
@@ -43,21 +48,23 @@
         <div class="home-page-serv__card">
           <img class="home-page-serv__card-img" src="../assets/img/3serv.svg" />
           <div class="home-page-serv__card-text">
-            <h2
-              class="home-page-serv__card-heading text__heading_size_h2"
-            >Занимайся там, где тебе удобно</h2>
-            <p
-              class="home-page-serv__card-body text__heading_size_m"
-            >Выбирайте время и тренируйтесь там, где есть интернет</p>
+            <h2 class="home-page-serv__card-heading text__heading_size_h2">
+              Занимайся там, где тебе удобно
+            </h2>
+            <p class="home-page-serv__card-body text__heading_size_m">
+              Выбирайте время и тренируйтесь там, где есть интернет
+            </p>
           </div>
         </div>
         <div class="home-page-serv__card">
           <img class="home-page-serv__card-img" src="../assets/img/4serv.svg" />
           <div class="home-page-serv__card-text">
-            <h2 class="home-page-serv__card-heading text__heading_size_h2">Экономте ваше время</h2>
-            <p
-              class="home-page-serv__card-body text__heading_size_m"
-            >Занимаясь онлайн, вы можете не тратить время на поездку в зал</p>
+            <h2 class="home-page-serv__card-heading text__heading_size_h2">
+              Экономте ваше время
+            </h2>
+            <p class="home-page-serv__card-body text__heading_size_m">
+              Занимаясь онлайн, вы можете не тратить время на поездку в зал
+            </p>
           </div>
         </div>
       </div>
@@ -69,28 +76,36 @@
           <div class="home-page-stream__status-stream"></div>
         </h1>
         <div class="home-page-stream__card card-training">
-          <h1 class="card-training__name">Шейпинг</h1>
-          <div class="card-training__trainer">
-            <div class="home-page-stream__card-trainerblock card-training__trainerblock">
-              <img
-                class="home-page-stream__card-trainer-img card-training__trainerimg"
-                src="../assets/img/avatar.png"
-                alt="avatar"
-                height="60"
-                width="60"
-              />
-              <p class="card-training__text">
-                Тренер
-                <span class="card-training__trainer-name">Алина Мронова</span>
-              </p>
+          <div class="card-training__nameblock">
+            <h1 class="card-training__name">Шейпинг</h1>
+            <div class="card-training__trainer">
+              <div
+                class="home-page-stream__card-trainerblock card-training__trainerblock"
+              >
+                <img
+                  class="home-page-stream__card-trainer-img card-training__trainerimg"
+                  src="../assets/img/avatar.png"
+                  alt="avatar"
+                  height="60"
+                  width="60"
+                />
+                <p class="card-training__text">
+                  Тренер
+                  <span class="card-training__trainer-name">Алина Мронова</span>
+                </p>
+              </div>
             </div>
           </div>
-          <a
-            class="card-training__btn text__heading_size_h3 btn__title btn__title_color_green btn__link"
-          >Приступить к тренировке</a>
-          <a
-            class="text__heading_size_h3 btn__title btn__title_color_transp-green btn__link"
-          >Расписание тренера</a>
+          <div class="card-training__btnblock">
+            <a
+              class="card-training__btn text__heading_size_h3 btn__title btn__title_color_green btn__link"
+              >Приступить к тренировке</a
+            >
+            <a
+              class="text__heading_size_h3 btn__title btn__title_color_transp-green btn__link"
+              >Расписание тренера</a
+            >
+          </div>
         </div>
         <iframe
           class="home-page-stream__current-video card-training__trainerblock"
