@@ -123,6 +123,22 @@
         ></iframe>-->
       </section>
     </section>
+    <section class="home-page-seeschedules">
+      <h1 class="text__color_green text__heading_size_h1">
+        Нет времени
+        <span class="text__color_black">тренироваться сейчас?</span>
+      </h1>
+      <p
+        class="home-page-seeschedules__body text__color_black text__heading_size_h2"
+      >
+        Открывай расписание и выбирай удобное для себя время или смотри
+        тренировки в записи позже
+      </p>
+      <a
+        class=" text__heading_size_h3 btn__title btn__title_color_green btn__link"
+        >Приступить к тренировке</a
+      >
+    </section>
     <Footer />
   </section>
 </template>

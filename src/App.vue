@@ -13,6 +13,7 @@
 @import '@/assets/scss/footer.scss';
 @import '@/assets/scss/service.scss';
 @import '@/assets/scss/streamvideo.scss';
+@import '@/assets/scss/schedules.scss';
 
 body {
   font-family: 'Raleway', sans-serif;

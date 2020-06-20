@@ -42,7 +42,12 @@ $color-dark-blue: #039792;
 .text__heading_size_xs {
   @include font-size($font-size-body12);
 }
-
+.text__color_green {
+  color: #05ad5c;
+}
+.text__color_black {
+  color: #000000;
+}
 .form-blocks {
   max-width: 521px;
   background-color: $color-dark-gray;
