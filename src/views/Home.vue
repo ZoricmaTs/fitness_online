@@ -109,19 +109,43 @@
         </div>
         <iframe
           class="home-page-stream__current-video card-training__trainerblock"
-          frameborder="1"
+          frameborder="0"
+          height="360"
+          width="640"
           src="https://www.youtube-nocookie.com/embed/cmsH6by2GAo?autoplay=0&amp;rel=0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
+
         <!-- <iframe
-        allowfullscreen
-        frameborder="0"
-        height="360"
-        src="//www.youtube.com/embed/live_stream?channel=UCjXYQ1YhutGpzXvQJctzvAQ&autoplay=1"
-        width="640"
+          allowfullscreen
+          frameborder="0"
+          height="360"
+          src="//www.youtube.com/embed/live_stream?channel=UCjXYQ1YhutGpzXvQJctzvAQ&autoplay=1"
+          width="640"
         ></iframe>-->
       </section>
+      <div class="reviews">
+        <VueSlickCarousel v-bind="settings" v-if="videoId.length">
+          <youtube
+            class="main__review"
+            :video-id="videoId"
+            ref="youtube"
+            @playing="playing"
+            v-for="video in videoId"
+            :key="video.videoId"
+          ></youtube>
+          <!-- <iframe
+          class="home-page-stream__current-video card-training__trainerblock"
+          frameborder="1"
+          height="360"
+          width="640"
+          src="https://www.youtube-nocookie.com/embed/cmsH6by2GAo?autoplay=0&amp;rel=0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe> -->
+        </VueSlickCarousel>
+      </div>
     </section>
     <section class="home-page-seeschedules">
       <h1 class="text__color_green text__heading_size_h1">
@@ -131,11 +155,11 @@
       <p
         class="home-page-seeschedules__body text__color_black text__heading_size_h2"
       >
-        Открывай расписание и выбирай удобное для себя время или смотри
+        Открывай расписание и выбирай удобное для себя времяили смотри
         тренировки в записи позже
       </p>
       <a
-        class=" text__heading_size_h3 btn__title btn__title_color_green btn__link"
+        class="text__heading_size_h3 btn__title btn__title_color_green btn__link"
         >Приступить к тренировке</a
       >
     </section>
@@ -144,13 +168,51 @@
 </template>
 
 <script>
+import VueSlickCarousel from 'vue-slick-carousel'
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
+
 export default {
   name: 'main-layout',
+  data() {
+    return {
+      settings: {
+        dots: true,
+        focusOnSelect: true,
+        infinite: true,
+        speed: 1000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        touchThreshold: 1,
+        centerMode: true
+      },
+      videoId: [
+        { videoId: 'Fl_AzkZ5Mtw' },
+        { videoId: 'FJZeFdPwTQI' },
+        { videoId: 'ryKlYPHk_Zs' },
+        { videoId: 'SEPraMdV8_w' },
+        { videoId: 'a_lOxeZEppM' }
+      ]
+    }
+  },
   components: {
     Navbar,
-    Footer
+    Footer,
+    VueSlickCarousel
+  },
+  methods: {
+    playVideo() {
+      this.player.playVideo()
+    },
+    playing() {
+      console.log('o/ we are watching!!!')
+    }
+  },
+  created() {},
+  computed: {
+    player() {
+      return this.$refs.youtube.player
+    }
   }
 }
 </script>
