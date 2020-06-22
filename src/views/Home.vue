@@ -107,7 +107,12 @@
             >
           </div>
         </div>
-        <iframe
+        <youtube
+          class="home-page-stream__current-video card-training__trainerblock"
+          video-id="Fl_AzkZ5Mtw"
+          ref="youtube"
+        ></youtube>
+        <!-- <iframe
           class="home-page-stream__current-video card-training__trainerblock"
           frameborder="0"
           height="360"
@@ -115,7 +120,7 @@
           src="https://www.youtube-nocookie.com/embed/cmsH6by2GAo?autoplay=0&amp;rel=0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-        ></iframe>
+        ></iframe> -->
 
         <!-- <iframe
           allowfullscreen
@@ -125,17 +130,25 @@
           width="640"
         ></iframe>-->
       </section>
+
       <div class="reviews">
-        <VueSlickCarousel v-bind="settings" v-if="videoId.length">
+        <VueSlickCarousel v-bind="settings" v-if="videoIds.length">
           <youtube
-            class="main__review"
-            :video-id="videoId"
+            :video-id="item.videoId"
             ref="youtube"
             @playing="playing"
-            v-for="video in videoId"
-            :key="video.videoId"
+            v-for="item in videoIds"
+            :key="item.videoId"
           ></youtube>
-          <!-- <iframe
+        </VueSlickCarousel>
+      </div>
+      <!-- <youtube video-id="Fl_AzkZ5Mtw" ref="youtube"></youtube>
+          <youtube video-id="FJZeFdPwTQI" ref="youtube"></youtube>
+          <youtube video-id="ryKlYPHk_Zs" ref="youtube"></youtube>
+          <youtube video-id="SEPraMdV8_w" ref="youtube"></youtube>
+      <youtube video-id="a_lOxeZEppM" ref="youtube"></youtube>-->
+      <!-- -->
+      <!-- <iframe
           class="home-page-stream__current-video card-training__trainerblock"
           frameborder="1"
           height="360"
@@ -143,9 +156,7 @@
           src="https://www.youtube-nocookie.com/embed/cmsH6by2GAo?autoplay=0&amp;rel=0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
-        ></iframe> -->
-        </VueSlickCarousel>
-      </div>
+      ></iframe>-->
     </section>
     <section class="home-page-seeschedules">
       <h1 class="text__color_green text__heading_size_h1">
@@ -186,7 +197,7 @@ export default {
         touchThreshold: 1,
         centerMode: true
       },
-      videoId: [
+      videoIds: [
         { videoId: 'Fl_AzkZ5Mtw' },
         { videoId: 'FJZeFdPwTQI' },
         { videoId: 'ryKlYPHk_Zs' },

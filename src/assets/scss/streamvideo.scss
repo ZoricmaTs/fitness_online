@@ -5,8 +5,8 @@
   &__current-video {
     grid-column: 6/12;
     grid-row: 2/2;
-    width: 100%;
-    height: auto;
+    // width: auto;
+    // height: 640px;
   }
   &__heading {
     grid-column: 2/6;

@@ -27,6 +27,11 @@ body {
   padding: 0;
 }
 
+iframe {
+  width: 100%;
+  max-width: 650px; /* Also helpful. Optional. */
+}
+
 .grid::before {
   position: fixed;
   top: 0;
