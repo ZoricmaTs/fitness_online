@@ -120,7 +120,7 @@
         ></iframe>-->
       </section>
 
-      <div class="reviews">
+      <!-- <div class="reviews">
         <VueSlickCarousel v-bind="settings" v-if="videoIds.length">
           <youtube
             class="carucel__video"
@@ -131,7 +131,17 @@
             :key="item.videoId"
           ></youtube>
         </VueSlickCarousel>
+      </div>-->
+      <div class="reviews">
+        <VueSlickCarousel v-bind="settings" v-if="videoIds.length">
+          <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
+          <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
+          <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
+          <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
+          <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
+        </VueSlickCarousel>
       </div>
+
       <!-- <youtube video-id="Fl_AzkZ5Mtw" ref="youtube"></youtube>
           <youtube video-id="FJZeFdPwTQI" ref="youtube"></youtube>
           <youtube video-id="ryKlYPHk_Zs" ref="youtube"></youtube>
@@ -178,11 +188,18 @@ export default {
         dots: true,
         focusOnSelect: true,
         infinite: true,
-        speed: 1000,
+        speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 1,
-        touchThreshold: 1,
-        centerMode: true
+        slidesToScroll: 3,
+        touchThreshold: 5
+
+        // "dots": true,
+        // "dotsClass": "slick-dots custom-dot-class",
+        // "edgeFriction": 0.35,
+        // "infinite": false,
+        // "speed": 500,
+        // "slidesToShow": 1,
+        // "slidesToScroll": 1
       },
       videoIds: [
         { videoId: '2Rg7zXKXIjk' }, //стретчинг
