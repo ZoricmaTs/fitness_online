@@ -54,7 +54,7 @@
         <div class="home-page-serv__card">
           <img class="home-page-serv__card-img" src="../assets/img/4serv.svg" />
           <div class="home-page-serv__card-text">
-            <h2 class="home-page-serv__card-heading text__heading_size_h2">Экономте ваше время</h2>
+            <h2 class="home-page-serv__card-heading text__heading_size_h2">Экономьте ваше время</h2>
             <p
               class="home-page-serv__card-body text__heading_size_m"
             >Занимаясь онлайн, вы можете не тратить время на поездку в зал</p>
@@ -62,7 +62,7 @@
         </div>
       </div>
     </section>
-    <section class="home-page-stream">
+    <section class="home-page-stream" id="trainings">
       <section class="grid">
         <h1 class="home-page-stream__heading text__heading_size_h1">
           Сейчас в эфире
@@ -158,20 +158,22 @@
           allowfullscreen
       ></iframe>-->
     </section>
+    <Slider />
     <section class="home-page-seeschedules">
       <h1 class="text__color_green text__heading_size_h1">
         Нет времени
         <span class="text__color_black">тренироваться сейчас?</span>
       </h1>
       <p class="home-page-seeschedules__body text__color_black text__heading_size_h2">
-        Открывай расписание и выбирай удобное для себя времяили смотри
+        Открывай расписание и выбирай удобное для себя время или смотри
         тренировки в записи позже
       </p>
-      <a
+      <router-link
+        :to="{ name: 'schedule' }"
         class="text__heading_size_h3 btn__title btn__title_color_green btn__link"
-      >Приступить к тренировке</a>
+      >Просмотреть расписание</router-link>
     </section>
-    <Footer />
+    <Footer id="footer" />
   </section>
 </template>
 
@@ -179,6 +181,7 @@
 import VueSlickCarousel from 'vue-slick-carousel'
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
+import Slider from '@/components/Slider.vue'
 
 export default {
   name: 'main-layout',
@@ -192,14 +195,6 @@ export default {
         slidesToShow: 3,
         slidesToScroll: 3,
         touchThreshold: 5
-
-        // "dots": true,
-        // "dotsClass": "slick-dots custom-dot-class",
-        // "edgeFriction": 0.35,
-        // "infinite": false,
-        // "speed": 500,
-        // "slidesToShow": 1,
-        // "slidesToScroll": 1
       },
       videoIds: [
         { videoId: '2Rg7zXKXIjk' }, //стретчинг
@@ -213,7 +208,8 @@ export default {
   components: {
     Navbar,
     Footer,
-    VueSlickCarousel
+    VueSlickCarousel,
+    Slider
   },
   methods: {
     playVideo() {
@@ -223,6 +219,7 @@ export default {
       console.log('o/ we are watching!!!')
     }
   },
+
   created() {},
   computed: {
     player() {

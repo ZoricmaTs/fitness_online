@@ -15,7 +15,7 @@
           <router-link class="navb__link" :to="{ name: 'schedule' }">Расписание</router-link>
         </li>
         <li class="navb__item">
-          <router-link class="navb__link" :to="{ name: 'contacts' }">Контакты</router-link>
+          <a href="#footer" class="navb__link">Контакты</a>
         </li>
       </ul>
     </nav>

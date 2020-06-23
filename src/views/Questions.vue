@@ -1,5 +1,5 @@
 <template>
-  <div>Расписание</div>
+  <div>Часто задаваемые вопросы</div>
 </template>
 
 <script>

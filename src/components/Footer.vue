@@ -37,16 +37,10 @@
           >Расписание</router-link>
         </li>
         <li class="footer-block__menu-item">
-          <a
+          <router-link
             class="footer-block__menu-link_team_gray text__heading_size_m"
-            :to="{ name: 'contacts' }"
-          >Контакты</a>
-        </li>
-        <li class="footer-block__menu-item">
-          <a
-            class="footer-block__menu-link_team_gray text__heading_size_m"
-            href="#"
-          >Вопросы и ответы</a>
+            :to="{ name: 'schedule' }"
+          >Вопросы и ответы</router-link>
         </li>
       </ul>
       <!-- </div> -->

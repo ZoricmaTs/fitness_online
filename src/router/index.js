@@ -5,6 +5,8 @@ import EmailConfirmation from '../views/EmailConfirmation.vue'
 import Authorization from '../views/Authorization.vue'
 import Register from '../views/Register.vue'
 import TermsOfService from '../views/TermsOfService.vue'
+import Questions from '../views/Questions.vue'
+import Schedule from '../views/Schedule.vue'
 
 Vue.use(VueRouter)
 
@@ -31,9 +33,14 @@ const routes = [
     component: TermsOfService
   },
   {
+    path: '/questions',
+    name: 'questions',
+    component: Questions
+  },
+  {
     path: '/schedule',
     name: 'schedule',
-    component: TermsOfService
+    component: Schedule
   },
   {
     path: '/contacts',
