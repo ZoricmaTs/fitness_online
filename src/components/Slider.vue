@@ -1,5 +1,5 @@
 <template>
-  <div class="box-wrap" v-on:click.stop="toggleDropdown">
+  <div class="box-wrap">
     <div class="box">
       <ul id="box-carousel" class="box-carousel" :class="{ invert }">
         <transition-group name="slide" tag="div">
@@ -21,12 +21,14 @@
       id="box-arrow-left"
       class="material-icons box-arrow box-arrow-left"
       @click="change(active - 1)"
-    >arrow_back_ios</span>
+      >arrow_back_ios</span
+    >
     <span
       id="box-arrow-right"
       class="material-icons box-arrow box-arrow-right"
       @click="change(active + 1)"
-    >arrow_forward_ios</span>
+      >arrow_forward_ios</span
+    >
 
     <!-- nav -->
     <!-- <ul class="box-navs">
@@ -76,10 +78,10 @@ export default {
       this.active = (index + this.total) % this.total
     }
   },
-  created() {
-    var vm = this
-    document.addEventListener('click', this.toggleDropdown.bind(this))
-  },
+  // created() {
+  //   var vm = this
+  //   document.addEventListener('click', this.toggleDropdown.bind(this))
+  // },
   mounted() {},
   computed: {
     total() {

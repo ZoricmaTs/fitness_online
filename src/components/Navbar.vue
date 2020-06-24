@@ -1,26 +1,36 @@
 <template>
   <header class="grid">
     <div class="grid-navb__logo">
-      <router-link :to="{ name: 'Home' }" class="logo__navb">Fitness</router-link>
+      <router-link :to="{ name: 'Home' }" class="logo__navb">
+        <img class="logo__img" src="../assets/img/logo-header.svg" />
+      </router-link>
     </div>
     <nav class="grid-navb__navb navb text__heading_size_m">
       <ul class="navb__list">
-        <li class="navb__item">
+        <li class="navb__item navb-none">
           <a href="#about-service" class="navb__link">О сервисе</a>
         </li>
-        <li class="navb__item">
-          <a href="#trainings" class="navb__link">Тренировки</a>
+        <li class="navb__item navb-none">
+          <a href="#trainings " class="navb__link">Тренировки</a>
         </li>
         <li class="navb__item">
-          <router-link class="navb__link" :to="{ name: 'schedule' }">Расписание</router-link>
+          <router-link class="navb__link navb-none" :to="{ name: 'schedule' }">Расписание</router-link>
+          <router-link class="navb__link" :to="{ name: 'schedule' }">
+            <img
+              class="navb__calendar"
+              style="display: none"
+              width="23"
+              src="../assets/img/calendaricon.svg"
+            />
+          </router-link>
         </li>
-        <li class="navb__item">
+        <li class="navb__item navb-none">
           <a href="#footer" class="navb__link">Контакты</a>
         </li>
       </ul>
     </nav>
     <router-link class="grid-navb__exit exit-block" :to="{ name: 'signin' }">
-      <div class="exit-block__text text__heading_size_m">Вход</div>
+      <div class="exit-block__text text__heading_size_m navb-none">Вход</div>
       <img class="exit-block__btn" src="../assets/img/exit-white.svg" />
     </router-link>
   </header>

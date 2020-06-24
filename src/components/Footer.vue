@@ -2,7 +2,9 @@
   <footer class="footer-block__color_gray footer">
     <section class="footer-block grid">
       <!-- <div class="footer-block__logo"> -->
-      <router-link :to="{ name: 'Home' }" class="footer-block__logo logo__footer">Fitness</router-link>
+      <router-link :to="{ name: 'Home' }" class="footer-block__logo logo__footer">
+        <img class="logo__img" src="../assets/img/logo-footer.svg" />
+      </router-link>
       <p class="footer-block__text">
         Сервис по подбору тренера и тренировок. Занятия и общение в онлайн
         режиме из любой точки планеты.

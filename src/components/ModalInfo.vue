@@ -1,12 +1,22 @@
 <template>
-  <transition name="modal" v-show="active" @click.self="modalClose()">
+  <transition name="modal">
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
           <div class="modal-heading">
             <slot name="header"></slot>
-            <a href="#" class="modal-close" v-show="showCloseCross" @click.prevent="close">
-              <img src="../assets/img/close-modal-new.svg" width="20" heigth="20" alt="closed" />
+            <a
+              href="#"
+              class="modal-close"
+              v-show="showCloseCross"
+              @click.prevent="close"
+            >
+              <img
+                src="../assets/img/close-modal-new.svg"
+                width="20"
+                heigth="20"
+                alt="closed"
+              />
             </a>
           </div>
 
@@ -23,7 +33,7 @@
 export default {
   data() {
     return {
-      active: false
+      // active: false
     }
   },
   name: '',
@@ -36,12 +46,12 @@ export default {
     },
     action() {
       this.$emit('action')
-    },
-    modalClose() {
-      console.warn('close')
-      this.active = false
-      this.$emit('modal_close')
     }
+    // modalClose() {
+    //   console.warn('close')
+    //   this.active = false
+    //   this.$emit('modal_close')
+    // }
   },
   mounted() {
     this.active = true

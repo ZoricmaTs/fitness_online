@@ -132,7 +132,7 @@
           ></youtube>
         </VueSlickCarousel>
       </div>-->
-      <div class="reviews">
+      <!-- <div class="reviews">
         <VueSlickCarousel v-bind="settings" v-if="videoIds.length">
           <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
           <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
@@ -140,7 +140,7 @@
           <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
           <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
         </VueSlickCarousel>
-      </div>
+      </div>-->
       <Slider />
       <!-- <ModalInfo :showCloseCross="true" @close="openVideoModal = false" v-show="openVideoModal" /> -->
       <!-- <youtube video-id="Fl_AzkZ5Mtw" ref="youtube"></youtube>
@@ -179,7 +179,7 @@
 </template>
 
 <script>
-import VueSlickCarousel from 'vue-slick-carousel'
+// import VueSlickCarousel from 'vue-slick-carousel'
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
 import Slider from '@/components/Slider.vue'
@@ -222,7 +222,7 @@ export default {
   components: {
     Navbar,
     Footer,
-    VueSlickCarousel,
+    // VueSlickCarousel,
     Slider
     // ModalInfo
   },
