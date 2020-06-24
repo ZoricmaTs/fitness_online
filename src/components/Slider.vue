@@ -1,139 +1,172 @@
 <template>
-  <div class="CollectionsSlider">
-    <button class="CollectionsSlider-button CollectionsSlider-button--right" @click="next">Next</button>
-    <button class="CollectionsSlider-button" @click="prev">Prev</button>
-    <div class="CollectionsSlider-innerContainer">
-      <div
-        class="CollectionsSlider-collectionContainer"
-        v-bind:class="{
-          'CollectionsSlider-collectionContainer--noAnim': !isAnimated
-        }"
-        v-bind:style="{ left: calcLeft(), width: calcWidth() }"
-      >
-        <img
-          :src="items[items.length - 2]"
-          class="CollectionsSlider-collection CollectionsSlider-collection--last"
-        />
-        <img
-          :src="items[items.length - 1]"
-          class="CollectionsSlider-collection CollectionsSlider-collection--last"
-        />
-        <img
-          v-for="(item, index) in items"
-          :src="item"
-          class="CollectionsSlider-collection"
-          :key="index"
-        />
-        <img
-          :src="items[0]"
-          class="CollectionsSlider-collection CollectionsSlider-collection--first"
-        />
-        <img
-          :src="items[1]"
-          class="CollectionsSlider-collection CollectionsSlider-collection--first"
-        />
-      </div>
+  <div class="box-wrap" v-on:click.stop="toggleDropdown">
+    <div class="box">
+      <ul id="box-carousel" class="box-carousel" :class="{ invert }">
+        <transition-group name="slide" tag="div">
+          <li
+            @click="openVideoModal = !openVideoModal"
+            v-for="(item, index) in list"
+            :key="item"
+            v-show="index === active"
+          >
+            <img :src="item" />
+          </li>
+        </transition-group>
+      </ul>
     </div>
+
+    <!-- arrow -->
+
+    <span
+      id="box-arrow-left"
+      class="material-icons box-arrow box-arrow-left"
+      @click="change(active - 1)"
+    >arrow_back_ios</span>
+    <span
+      id="box-arrow-right"
+      class="material-icons box-arrow box-arrow-right"
+      @click="change(active + 1)"
+    >arrow_forward_ios</span>
+
+    <!-- nav -->
+    <!-- <ul class="box-navs">
+      <li v-for="(item, index) in list" :key="item" class @click="change(index)">
+        <div class="circle" :class="{ active: active === index }"></div>
+      </li>
+    </ul>-->
+
+    <VideoModal
+      :showCloseCross="true"
+      @close="openVideoModal = false"
+      v-show="openVideoModal"
+      :videoId="this.videos[this.active]"
+    />
   </div>
 </template>
 
 <script>
+import VideoModal from '@/components/VideoModal.vue'
 export default {
   data() {
     return {
-      position: -2,
-      isAnimated: true,
-      items: [
-        '@/assets/img/videoyoga.jpg',
-        'http://via.placeholder.com/350x150',
-        'http://via.placeholder.com/350x150',
-        'http://via.placeholder.com/350x150',
-        'http://via.placeholder.com/350x150',
-        'http://via.placeholder.com/350x150',
-        'http://via.placeholder.com/350x150',
-        'http://via.placeholder.com/350x150'
+      list: [
+        'https://picsum.photos/id/100/500/250',
+        'https://picsum.photos/id/200/500/250',
+        'https://picsum.photos/id/300/500/250',
+        'https://picsum.photos/id/400/500/250'
       ],
-      collectionWidth: 370
+      videos: ['2Rg7zXKXIjk', 'FJZeFdPwTQI', 'ryKlYPHk_Zs', 'SEPraMdV8_w'],
+      trainerss: [
+        'Татьяна Самсонова',
+        'Алина Мронова',
+        'Геннадий Силович',
+        'Артур Пирожков'
+      ],
+      active: 0,
+      invert: false,
+      openVideoModal: false
     }
+  },
+  components: {
+    VideoModal
   },
   methods: {
-    calcLeft() {
-      return (
-        this.position * this.collectionWidth + this.collectionWidth / 2 + 'px'
-      )
-    },
-    calcWidth() {
-      return this.collectionWidth * (this.items.length + 5) + 'px'
-    },
-    next() {
-      if (this.position === -this.items.length - 2) {
-        this.isAnimated = false
-        this.position = -2
-      }
-      setTimeout(() => {
-        this.isAnimated = true
-        this.position--
-      }, 500)
-    },
-    prev() {
-      if (this.position === -2) {
-        this.isAnimated = false
-        this.position = -this.items.length - 2
-      }
-      setTimeout(() => {
-        this.isAnimated = true
-        this.position++
-      }, 500)
+    change(index) {
+      this.invert = index < this.active
+      this.active = (index + this.total) % this.total
     }
   },
-  mounted() {}
+  created() {
+    var vm = this
+    document.addEventListener('click', this.toggleDropdown.bind(this))
+  },
+  mounted() {},
+  computed: {
+    total() {
+      return this.list.length
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-.CollectionsSlider {
+.material-icons {
+  color: #05ad5c;
+}
+.box-wrap {
   position: relative;
-
-  &-button {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &-button--right {
-    left: auto;
-    right: 0;
-  }
-
-  &-innerContainer {
-    width: 740px;
-    height: 170px;
-    overflow: hidden;
-    margin: 0 auto;
+  margin: 100px auto 0;
+  width: 500px;
+}
+.box-carousel {
+  width: 100%;
+  > div {
     position: relative;
+    overflow-x: hidden;
+    padding-top: percentage(250 / 500);
+    width: 100%;
   }
-
-  &-collectionContainer {
-    height: 170px;
+  li {
     position: absolute;
-    transition: left 1s ease-in-out;
+    top: 0;
+    left: 0;
   }
-
-  &-collectionContainer--noAnim {
-    transition: none;
+  img {
+    display: block;
   }
-
-  &-collection {
-    margin: 10px;
+}
+.box-arrow {
+  position: absolute;
+  top: calc(50% - 40px);
+  cursor: pointer;
+  &.disabled {
+    display: none;
   }
-
-  &-collection--first {
-    border: 1px solid green;
+}
+.box-arrow-left {
+  left: -60px;
+}
+.box-arrow-right {
+  right: -60px;
+}
+.box-navs {
+  position: absolute;
+  bottom: -27px;
+  left: 50%;
+  display: flex;
+  transform: translateX(-50%);
+  li {
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
   }
-
-  &-collection--last {
-    border: 1px solid blue;
+  i.active {
+    font-weight: 900;
   }
+}
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform 0.5s;
+}
+.slide-enter {
+  transform: translateX(100%);
+  @at-root {
+    .invert .slide-enter {
+      transform: translateX(-100%);
+    }
+  }
+}
+.slide-leave-to {
+  transform: translateX(-100%);
+  @at-root {
+    .invert .slide-leave-to {
+      transform: translateX(100%);
+    }
+  }
+}
+.circle {
+  width: 10px;
+  border-radius: 50%;
 }
 </style>

@@ -141,7 +141,8 @@
           <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
         </VueSlickCarousel>
       </div>
-
+      <Slider />
+      <!-- <ModalInfo :showCloseCross="true" @close="openVideoModal = false" v-show="openVideoModal" /> -->
       <!-- <youtube video-id="Fl_AzkZ5Mtw" ref="youtube"></youtube>
           <youtube video-id="FJZeFdPwTQI" ref="youtube"></youtube>
           <youtube video-id="ryKlYPHk_Zs" ref="youtube"></youtube>
@@ -158,7 +159,7 @@
           allowfullscreen
       ></iframe>-->
     </section>
-    <Slider />
+
     <section class="home-page-seeschedules">
       <h1 class="text__color_green text__heading_size_h1">
         Нет времени
@@ -182,6 +183,7 @@ import VueSlickCarousel from 'vue-slick-carousel'
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
 import Slider from '@/components/Slider.vue'
+// import ModalInfo from '@/components/ModalInfo.vue'
 
 export default {
   name: 'main-layout',
@@ -200,9 +202,21 @@ export default {
         { videoId: '2Rg7zXKXIjk' }, //стретчинг
         { videoId: 'FJZeFdPwTQI' },
         { videoId: 'ryKlYPHk_Zs' },
-        { videoId: 'SEPraMdV8_w' },
-        { videoId: 'a_lOxeZEppM' }
-      ]
+        { videoId: 'SEPraMdV8_w' }
+      ],
+      trainers: [
+        { trainer: 'Татьяна Самсонова' }, //стретчинг
+        { trainer: 'Алина Мронова' },
+        { trainer: 'Геннадий Силович' },
+        { trainer: 'Артур Пирожков' }
+      ],
+      trainings: [
+        { nametrain: 'стретчинг' }, //стретчинг
+        { nametrain: 'калланетика' },
+        { nametrain: 'йога' },
+        { nametrain: 'тренировочка' }
+      ],
+      openVideoModal: false
     }
   },
   components: {
@@ -210,6 +224,7 @@ export default {
     Footer,
     VueSlickCarousel,
     Slider
+    // ModalInfo
   },
   methods: {
     playVideo() {

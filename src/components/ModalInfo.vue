@@ -1,5 +1,5 @@
 <template>
-  <transition name="modal">
+  <transition name="modal" v-show="active" @click.self="modalClose()">
     <div class="modal-mask">
       <div class="modal-wrapper">
         <div class="modal-container">
@@ -21,6 +21,11 @@
 
 <script lang="ts">
 export default {
+  data() {
+    return {
+      active: false
+    }
+  },
   name: '',
   props: {
     showCloseCross: { type: Boolean, default: true }
@@ -31,7 +36,15 @@ export default {
     },
     action() {
       this.$emit('action')
+    },
+    modalClose() {
+      console.warn('close')
+      this.active = false
+      this.$emit('modal_close')
     }
+  },
+  mounted() {
+    this.active = true
   }
 }
 </script>

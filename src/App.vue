@@ -7,6 +7,7 @@
 <style lang="scss">
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Nothing+You+Could+Do&display=swap');
+
 @import '@/assets/scss/variables.scss';
 @import '@/assets/scss/page-style.scss';
 @import '@/assets/scss/btn.scss';
@@ -29,7 +30,7 @@ body {
 
 iframe {
   width: 100%;
-  max-width: 650px; /* Also helpful. Optional. */
+  // max-width: 650px; /* Also helpful. Optional. */
 }
 
 .grid::before {
