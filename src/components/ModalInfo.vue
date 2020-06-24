@@ -12,9 +12,9 @@
               @click.prevent="close"
             >
               <img
-                src="../assets/img/close-modal-new.svg"
-                width="20"
-                heigth="20"
+                src="../assets/img/exitmodal.svg"
+                width="64"
+                heigth="64"
                 alt="closed"
               />
             </a>

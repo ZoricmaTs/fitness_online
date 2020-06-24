@@ -9,11 +9,7 @@
     <span slot="header" class="form-modal-info__heading text__heading_size_h2"></span>
     <div class slot="body">
       <div class="form-modal-info__text-block">
-        <youtube
-          class="home-page-stream__current-video card-training__trainerblock"
-          :video-id="this.videoId"
-          ref="youtube"
-        ></youtube>
+        <youtube class="card-training__trainerblock" :video-id="this.videoId" ref="youtube"></youtube>
         <div class="card-training__nameblock video-modal__nameblock">
           <h1 class="card-training__name" :trainer="this.trainer">{{ this.trainer }}</h1>
           <div class="card-training__trainer">
