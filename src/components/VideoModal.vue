@@ -44,7 +44,7 @@ export default {
   },
   props: {
     videoId: { type: String, default: 'Fl_AzkZ5Mtw' },
-    trainer: { type: String, default: 'sdfsdf' }
+    trainer: { type: String, default: 'Стретчинг' }
   },
   methods: {
     onClose() {

@@ -23,12 +23,12 @@
         <li class="footer-block__menu-item">
           <a
             class="footer-block__menu-link_team_gray text__heading_size_m"
-            href="/home?show=about-service"
+            href="/?show=about-service"
           >О сервисе</a>
         </li>
         <li class="footer-block__menu-item">
           <a
-            href="/home?show=trainings"
+            href="/?show=trainings"
             class="footer-block__menu-link_team_gray text__heading_size_m"
           >Тренировки</a>
         </li>

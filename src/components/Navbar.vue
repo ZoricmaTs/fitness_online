@@ -8,14 +8,14 @@
     <nav class="grid-navb__navb navb text__heading_size_m">
       <ul class="navb__list">
         <li class="navb__item navb-none">
-          <a href="/home?show=about-service" class="navb__link">О сервисе</a>
+          <a href="/?show=about-service" class="navb__link">О сервисе</a>
           <!-- <router-link
             class="navb__link"
             :to="{ name: 'HomeMain', hash: '#about-service' }"
           >О сервисе</router-link>-->
         </li>
         <li class="navb__item navb-none">
-          <a href="/home?show=trainings" class="navb__link">Тренировки</a>
+          <a href="/?show=trainings" class="navb__link">Тренировки</a>
         </li>
         <li class="navb__item">
           <router-link class="navb__link navb-none" :to="{ name: 'schedule' }">Расписание</router-link>
