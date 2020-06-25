@@ -1,4 +1,97 @@
 @import '@/assets/scss/variables.scss';
+.page-bg {
+  background-color: #454545;
+}
+.schedule-container {
+  background-color: #eff2f1;
+}
+.schedule {
+  display: flex;
+  flex-wrap: wrap;
+  &__heading {
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 25px;
+  }
+}
+.schedule-day__block.active {
+  background-color: #05ad5c;
+  color: #ffffff;
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.schedule-day {
+  display: flex;
+  flex-direction: row;
+  // align-items: center;
+  justify-content: center;
+  &__block {
+    color: #454545;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: -7px -2px 25px rgba(0, 0, 0, 0.17);
+    padding: 20px;
+    width: 213px;
+    width: 171px;
+    cursor: pointer;
+    transition: transform 0.8s;
+    &:hover,
+    &:focus {
+      background-color: #05ad5c;
+      color: #ffffff;
+      -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05);
+    }
+  }
+  &__block:nth-of-type(2) {
+    margin: 0 30px;
+  }
+  &__numb {
+    @include font-size(80px);
+    line-height: 94px;
+  }
+  &__block-min {
+    position: relative;
+    color: #000000;
+    background-color: #eff2f1;
+    box-shadow: -7px -2px 25px rgba(0, 0, 0, 0.17);
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  &__block-min:nth-of-type(4n) {
+    margin-right: 0px;
+  }
+  &__training {
+    font-weight: 500;
+    line-height: 19px;
+    margin-bottom: 20px;
+  }
+  &__trainer {
+    font-weight: 300;
+    line-height: 14px;
+  }
+  &__time {
+    position: absolute;
+    bottom: 20px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #4097a7;
+  }
+}
+
+.schedule-wrapper {
+  margin: 30px auto 0 auto;
+  padding-bottom: 30px;
+  max-width: 820px;
+}
 
 .home-page-seeschedules {
   display: flex;

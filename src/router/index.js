@@ -13,8 +13,15 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'home',
+    component: Home,
+    params: true
+  },
+  {
+    path: '/home',
+    name: 'HomeMain',
+    component: Home,
+    params: true
   },
 
   {
@@ -56,6 +63,17 @@ const routes = [
 ]
 
 const router = new VueRouter({
+  abstract: true,
+  mode: 'history',
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+    if (to.hash) {
+      return { selector: to.hash }
+    }
+    return { x: 0, y: 0 }
+  },
   routes,
   linkActiveClass: 'active', // помечать активными ссылками
   linkExactActiveClass: 'exact-active'

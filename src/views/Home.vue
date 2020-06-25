@@ -9,7 +9,7 @@
             <span class="text-title__color_green">дома</span>
           </h1>
           <a
-            href="#training-online"
+            href="https://discord.gg/9AH4dtn"
             class="text__heading_size_h2 title-link btn__title btn__title_color_green btn__link"
           >Приступить к тренировке</a>
         </div>
@@ -94,12 +94,13 @@
             </div>
             <div class="card-training__btnblock">
               <a
-                href="https://discord.gg/vnz8DS"
+                href="https://discord.gg/KwvrZcg"
                 class="card-training__btn text__heading_size_h3 btn__title btn__title_color_green btn__link"
               >Приступить к тренировке</a>
-              <a
+              <router-link
                 class="text__heading_size_h3 btn__title btn__title_color_transp-green btn__link"
-              >Расписание тренера</a>
+                :to="{ name: 'schedule' }"
+              >Расписание тренировок</router-link>
             </div>
           </div>
           <youtube class="home-page-stream__current-video" video-id="Fl_AzkZ5Mtw" ref="youtube"></youtube>
@@ -143,8 +144,9 @@
           <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
         </VueSlickCarousel>
       </div>-->
+      <Slider class="bg-color" />
     </section>
-    <Slider />
+
     <section class="home-page-seeschedules">
       <h1 class="text__color_green text__heading_size_h1">
         Нет времени
@@ -221,6 +223,12 @@ export default {
   },
 
   created() {},
+
+  mounted() {
+    // add a id to the div we want to bring in foucs
+    // and id and the id is paased the query params
+    document.getElementById(this.$route.query.show).scrollIntoView()
+  },
   computed: {
     player() {
       return this.$refs.youtube.player
@@ -228,4 +236,8 @@ export default {
   }
 }
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+.bg-color {
+  background-color: #454545;
+}
+</style>

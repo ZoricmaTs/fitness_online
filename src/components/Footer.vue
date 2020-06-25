@@ -2,7 +2,7 @@
   <footer class="footer-block__color_gray footer">
     <section class="footer-block grid">
       <!-- <div class="footer-block__logo"> -->
-      <router-link :to="{ name: 'Home' }" class="footer-block__logo logo__footer">
+      <router-link :to="{ name: 'home' }" class="footer-block__logo logo__footer">
         <img class="logo__img" src="../assets/img/logo-footer.svg" />
       </router-link>
       <p class="footer-block__text">
@@ -23,12 +23,12 @@
         <li class="footer-block__menu-item">
           <a
             class="footer-block__menu-link_team_gray text__heading_size_m"
-            href="#about-service"
+            href="/home?show=about-service"
           >О сервисе</a>
         </li>
         <li class="footer-block__menu-item">
           <a
-            href="#trainings"
+            href="/home?show=trainings"
             class="footer-block__menu-link_team_gray text__heading_size_m"
           >Тренировки</a>
         </li>
@@ -41,7 +41,7 @@
         <li class="footer-block__menu-item">
           <router-link
             class="footer-block__menu-link_team_gray text__heading_size_m"
-            :to="{ name: 'schedule' }"
+            :to="{ name: 'questions' }"
           >Вопросы и ответы</router-link>
         </li>
       </ul>

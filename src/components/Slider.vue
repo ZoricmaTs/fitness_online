@@ -21,14 +21,12 @@
       id="box-arrow-left"
       class="material-icons box-arrow box-arrow-left"
       @click="change(active - 1)"
-      >arrow_back_ios</span
-    >
+    >arrow_back_ios</span>
     <span
       id="box-arrow-right"
       class="material-icons box-arrow box-arrow-right"
       @click="change(active + 1)"
-      >arrow_forward_ios</span
-    >
+    >arrow_forward_ios</span>
 
     <!-- nav -->
     <!-- <ul class="box-navs">
@@ -96,8 +94,9 @@ export default {
   color: #05ad5c;
 }
 .box-wrap {
+  background-color: #454545;
   position: relative;
-  margin: 100px auto 0;
+  margin: 0 auto 0;
   width: 500px;
 }
 .box-carousel {
@@ -119,10 +118,18 @@ export default {
 }
 .box-arrow {
   position: absolute;
-  top: calc(50% - 40px);
+  top: calc(50% - 10px);
   cursor: pointer;
   &.disabled {
     display: none;
+  }
+  &:hover,
+  &:focus {
+    // background-color: #05ad5c;
+    // color: #ffffff;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
   }
 }
 .box-arrow-left {
