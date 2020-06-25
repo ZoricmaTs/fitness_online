@@ -104,8 +104,9 @@ export default {
   > div {
     position: relative;
     overflow-x: hidden;
-    padding-top: percentage(250 / 500);
     width: 100%;
+    padding-top: percentage(250 / 500);
+    // width: 100%;
   }
   li {
     position: absolute;

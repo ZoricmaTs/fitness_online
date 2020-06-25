@@ -57,7 +57,7 @@
           <div class="home-page-serv__card">
             <img class="home-page-serv__card-img" src="../assets/img/4serv.svg" />
             <div class="home-page-serv__card-text">
-              <h2 class="home-page-serv__card-heading text__heading_size_h2">Экономьте ваше время</h2>
+              <h2 class="home-page-serv__card-heading text__heading_size_h2">Экономь свое время</h2>
               <p
                 class="home-page-serv__card-body text__heading_size_m"
               >Занимаясь онлайн, вы можете не тратить время на поездку в зал</p>
@@ -105,6 +105,7 @@
           </div>
           <youtube class="home-page-stream__current-video" video-id="Fl_AzkZ5Mtw" ref="youtube"></youtube>
         </div>
+        <h1 class="home-page-stream__headingtrain text__heading_size_h1">Записи тренировок</h1>
         <!-- <iframe
           class="home-page-stream__current-video card-training__trainerblock"
           frameborder="0"
@@ -144,9 +145,10 @@
           <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
         </VueSlickCarousel>
       </div>-->
-      <Slider class="bg-color" />
     </section>
-
+    <div class="bg-color">
+      <Slider />
+    </div>
     <section class="home-page-seeschedules">
       <h1 class="text__color_green text__heading_size_h1">
         Нет времени
@@ -239,5 +241,6 @@ export default {
 <style lang="scss">
 .bg-color {
   background-color: #454545;
+  padding-bottom: 50px;
 }
 </style>
