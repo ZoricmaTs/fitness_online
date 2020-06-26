@@ -24,7 +24,7 @@
             <div class="home-page-serv__card-text">
               <h2 class="home-page-serv__card-heading text__heading_size_h2">Отслеживай прогресс</h2>
               <p class="home-page-serv__card-body text__heading_size_m">
-                После каждой тренировки получайте очки прогресса и узнавайте
+                После каждой тренировки получайте очки прогресса и узнавайте,
                 сколько калорий вы сожгли
               </p>
             </div>
@@ -36,7 +36,7 @@
                 class="home-page-serv__card-heading text__heading_size_h2"
               >Тренируйся в группе или индивидуально</h2>
               <p class="home-page-serv__card-body text__heading_size_m">
-                Наш сервис предлагает возможность заниматься в группе, либо
+                Наш сервис предлагает возможность заниматься в группе либо
                 индивидуально с тренером
               </p>
             </div>
@@ -51,7 +51,7 @@
               >Занимайся там, где тебе удобно</h2>
               <p
                 class="home-page-serv__card-body text__heading_size_m"
-              >Выбирайте время и тренируйтесь там, где есть интернет</p>
+              >Выбирайте время и тренируйтесь с телефона в любом месте</p>
             </div>
           </div>
           <div class="home-page-serv__card">

@@ -9,7 +9,7 @@
             :key="item"
             v-show="index === active"
           >
-            <img :src="item" />
+            <img :src="item" width="500" height="250" />
           </li>
         </transition-group>
       </ul>
@@ -50,10 +50,10 @@ export default {
   data() {
     return {
       list: [
-        'https://picsum.photos/id/100/500/250',
-        'https://picsum.photos/id/200/500/250',
-        'https://picsum.photos/id/300/500/250',
-        'https://picsum.photos/id/400/500/250'
+        require('@/assets/img/videoprew1.jpg'),
+        require('@/assets/img/videoprew1.jpg'),
+        require('@/assets/img/videoprew1.jpg'),
+        require('@/assets/img/videoprew1.jpg')
       ],
       videos: ['2Rg7zXKXIjk', 'FJZeFdPwTQI', 'ryKlYPHk_Zs', 'SEPraMdV8_w'],
       trainerss: [
@@ -115,6 +115,7 @@ export default {
   }
   img {
     display: block;
+    width: 500px;
   }
 }
 .box-arrow {

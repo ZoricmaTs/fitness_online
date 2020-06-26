@@ -19,6 +19,9 @@ $color-light-gray: #b0b0b0;
 $color-blue: #03ada7;
 $color-dark-blue: #039792;
 
+.text__heading_size_hd {
+  @include font-size(48px);
+}
 .text__heading_size_h1 {
   @include font-size($font-size-40);
   font-weight: 600;
