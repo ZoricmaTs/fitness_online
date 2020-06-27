@@ -17,7 +17,7 @@
       </section>
     </section>
     <section class="home-page-serv" id="about-service">
-      <h1 class="home-page-serv__heading text__heading_size_h1">Что предлагает наш сервис</h1>
+      <h1 class="home-page-serv__heading text__heading_size_h1">Тренируйся эффективнее с нами!</h1>
       <div class="home-page-serv__cards">
         <div class="home-page-serv__cardblock">
           <div class="home-page-serv__card">

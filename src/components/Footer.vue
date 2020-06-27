@@ -63,15 +63,13 @@
         <ul class="footer-blockcopy__social social__list social__heading">
           <li class="social__item">
             <a class="social__link" href="https://www.facebook.com">
-              <img src="../assets/img/facebookw.svg" height="27" alt="social media facebook" />
+              <img src="../assets/img/facebookw.svg" alt="social media facebook" />
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="https://twitter.com/explore">
               <img
                 src="../assets/img/twitterw.svg"
-                width="26"
-                height="22"
                 alt="social media twitter"
               />
             </a>
@@ -80,15 +78,13 @@
             <a class="social__link" href="https://www.instagram.com/?hl=ru">
               <img
                 src="../assets/img/instw.svg"
-                width="24"
-                height="24"
                 alt="social media instagram"
               />
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="https://vk.com">
-              <img src="../assets/img/vkw.svg" width="31" height="18" alt="social media vkontakte" />
+              <img src="../assets/img/vkw.svg" alt="social media vkontakte" />
             </a>
           </li>
         </ul>

@@ -29,13 +29,13 @@
   grid-row: 1/1;
   font-style: normal;
   font-weight: 600;
-  @include font-size(100px);
-  line-height: 130px;
+  @include font-size(90px);
+  line-height: 106px;
   color: #e9e9e9;
-  max-width: 800px;
-  max-height: 492px;
-  margin-top: 65px;
-  margin-bottom: 60px;
+  max-width: 526px;
+  max-height: 318px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 
   &__color_green {
     color: #05ad5c;
@@ -45,7 +45,19 @@
   grid-column: 2/8;
   grid-row: 2/2;
   margin-bottom: 105px;
+  @include font-size(24px);
+  line-height: 28px;
+  outline: none;
+  border-radius: 0 !important;
+  font-style: normal;
+  font-weight: normal;
+  max-width: 400px;
+  padding: 18px;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
 }
+
 //navbar----------------------------------------------------------------------
 .navb__auth {
   margin: auto 0;
