@@ -24,7 +24,6 @@
 .schedule-day {
   display: flex;
   flex-direction: row;
-  // align-items: center;
   justify-content: center;
   &__block {
     color: #454545;
@@ -78,12 +77,23 @@
     font-weight: 300;
     line-height: 14px;
   }
+
   &__time {
     position: absolute;
     bottom: 20px;
-    font-weight: 500;
-    line-height: 14px;
+
     color: #4097a7;
+  }
+  &__clock {
+    display: inline-block;
+    font-weight: 500;
+    line-height: 17px;
+    margin-left: 25px;
+  }
+  &__clockimg {
+    display: inline-block;
+    position: absolute;
+    top: 2px;
   }
 }
 

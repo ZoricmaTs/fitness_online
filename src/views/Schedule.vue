@@ -33,9 +33,13 @@
           >
             <p class="schedule-day__training text__heading_size_m">{{ training.name }}</p>
             <p class="schedule-day__trainer text__heading_size_xs">Тренер: {{ training.trainer }}</p>
-            <p
-              class="schedule-day__time text__heading_size_xs"
-            >{{ trainingDate.date.format('DD MMM') }}, {{ training.time }}</p>
+            <div class="schedule-day__time">
+              <img class="schedule-day__clockimg" src="../assets/img/clock.svg" />
+
+              <p
+                class="schedule-day__clock text__heading_size_xs"
+              >{{ trainingDate.date.format('DD MMM') }}, {{ training.time }}</p>
+            </div>
           </div>
         </section>
       </div>
