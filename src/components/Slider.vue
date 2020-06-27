@@ -10,6 +10,7 @@
             v-show="index === active"
           >
             <div class="nametaining text__heading_size_h3">{{ trainings[index] }}</div>
+            <img src="../assets/img/playbtn.svg" class="btn-image" width="56" height="55" />
             <img class="box-image" :src="item" width="500" height="250" />
           </li>
         </transition-group>
@@ -18,16 +19,12 @@
 
     <!-- arrow -->
 
-    <span
-      id="box-arrow-left"
-      class="material-icons box-arrow box-arrow-left"
-      @click="change(active - 1)"
-    >arrow_back_ios</span>
-    <span
-      id="box-arrow-right"
-      class="material-icons box-arrow box-arrow-right"
-      @click="change(active + 1)"
-    >arrow_forward_ios</span>
+    <div id="box-arrow-left" class="box-arrow box-arrow-left" @click="change(active - 1)">
+      <img src="../assets/img/left-arrow.svg" class="btn-image" width="25" height="59" />
+    </div>
+    <div id="box-arrow-right" class="box-arrow box-arrow-right" @click="change(active + 1)">
+      <img src="../assets/img/right-arrow.svg" class="btn-image" width="25" height="59" />
+    </div>
 
     <VideoModal
       :showCloseCross="true"
@@ -93,8 +90,20 @@ export default {
 
 <style lang="scss" scoped>
 .box-image {
-  cursor: pointer;
+  // cursor: pointer;
 }
+.btn-image {
+  position: absolute;
+  top: percentage(190 / 500);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
 .nametaining {
   position: absolute;
   top: 0;
@@ -142,16 +151,16 @@ export default {
 }
 .box-arrow {
   position: absolute;
-  top: calc(50% - 10px);
+  top: calc(50% - 36px);
   cursor: pointer;
   &.disabled {
     display: none;
   }
   &:hover,
   &:focus {
-    -webkit-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    transform: scale(1.5);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
   }
 }
 .box-arrow-left {
