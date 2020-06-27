@@ -4,48 +4,16 @@
 }
 .logo {
   &__navb {
-    position: relative;
-    font-family: 'Nothing You Could Do', cursive;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: none;
-    @include font-size(45px);
-    color: #05ad5c;
     width: 142px;
     height: 60px;
     margin-top: 20px;
-    &::after {
-      position: absolute;
-      bottom: 0px;
-      right: -45px;
-      font-family: 'Montserrat', sans-serif;
-      line-height: 20px;
-      @include font-size(16px);
-      content: '';
-      color: #e9e9e9;
-    }
   }
   &__footer {
-    position: relative;
-    font-family: 'Nothing You Could Do', cursive;
-    font-style: normal;
-    font-weight: normal;
+    position: absolute;
+    top: -10px;
     max-width: 488px;
     width: 142px;
     height: 60px;
-    text-decoration: none;
-    @include font-size(40px);
-    color: #e9e9e9;
-    &::after {
-      position: absolute;
-      bottom: 8px;
-      right: -11px;
-      font-family: 'Montserrat', sans-serif;
-      line-height: 13px;
-      @include font-size(11px);
-      content: '';
-      color: #e9e9e9;
-    }
   }
 }
 
@@ -54,7 +22,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100%;
+  height: 100vh;
 }
 .text-title {
   grid-column: 2/9;
@@ -65,7 +33,7 @@
   line-height: 130px;
   color: #e9e9e9;
   max-width: 800px;
-  max-height: 318px;
+  max-height: 492px;
   margin-top: 65px;
   margin-bottom: 60px;
 

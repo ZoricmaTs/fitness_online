@@ -9,8 +9,9 @@
             <span class="text-title__color_green">дома</span>
           </h1>
           <a
+            target="_blank"
             href="https://discord.gg/9AH4dtn"
-            class="text__heading_size_h2 title-link btn__title btn__title_color_green btn__link"
+            class="title-link btn__title btn__title_color_green btn__link"
           >Приступить к тренировке</a>
         </div>
       </section>
@@ -94,6 +95,7 @@
             </div>
             <div class="card-training__btnblock">
               <a
+                target="_blank"
                 href="https://discord.gg/KwvrZcg"
                 class="card-training__btn text__heading_size_h3 btn__title btn__title_color_green btn__link"
               >Приступить к тренировке</a>

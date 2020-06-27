@@ -16,46 +16,18 @@
     background-color: #e9e9e9;
   }
   &__logo {
-    grid-column: 3/5;
+    position: relative;
+    grid-column: 3/6;
     grid-row: 1/1;
   }
   &__menu {
-    grid-column: 6/8;
-    grid-row: 1/3;
     max-width: 135px;
   }
-  &__heading-soc {
-    grid-column: 8/10;
+  &__contact {
+    grid-column: 10/13;
     grid-row: 1/1;
   }
-  &__img {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  &__img:nth-of-type(1, 2, 3) {
-    grid-row: 2/2;
-  }
-  &__img:nth-of-type(4, 5, 6) {
-    grid-row: 3/3;
-  }
-  &__img:nth-of-type(1) {
-    grid-column: 8/8;
-  }
-  &__img:nth-of-type(2) {
-    grid-column: 9/9;
-  }
-  &__img:nth-of-type(3) {
-    grid-column: 10/10;
-  }
-  &__img:nth-of-type(4) {
-    grid-column: 8/8;
-  }
-  &__img:nth-of-type(5) {
-    grid-column: 9/9;
-  }
-  &__img:nth-of-type(6) {
-    grid-column: 10/10;
-  }
+
   &__lg {
     display: flex;
     flex-direction: row;
@@ -76,7 +48,7 @@
     font-style: normal;
     font-weight: normal;
     line-height: 15px;
-    @include font-size(13px);
+    @include font-size(15px);
     color: #e9e9e9;
   }
   &__link-email {
@@ -87,14 +59,8 @@
     line-height: 16px;
   }
   &__link-email_color-team_gray {
-    font-weight: 700;
     font-style: normal;
     color: #e9e9e9;
-  }
-  &__link-email_color-team_white {
-    font-style: normal;
-    font-weight: 500;
-    color: $color-dark-gray;
   }
 
   &__menu-heading {
@@ -104,16 +70,13 @@
     color: #e9e9e9;
   }
   &__menu-heading-nav {
-    grid-column: 6/8;
+    grid-column: 7/9;
     grid-row: 1/1;
   }
   &__menu-heading_blue {
     color: #05ad5c;
   }
-  &__menu-list {
-    grid-column: 6/8;
-    grid-row: 2/4;
-  }
+
   &__menu-item {
     list-style-type: none;
     text-decoration: solid;
@@ -144,28 +107,20 @@
   padding-top: 15px;
   padding-bottom: 40px;
   color: #e9e9e9;
+  opacity: 0.7;
+  &__social {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    max-width: 188px;
+  }
 }
 .footer-blockcopy__text {
   line-height: 14px;
-  grid-column: 3/5;
-  grid-row: 2/2;
-
+  @include font-size(10px);
+  opacity: 0.7;
   &__text_team_gray {
     color: #e9e9e9;
   }
-  &__text_team_white {
-    color: $color-dark-gray;
-  }
-}
-.footer-blockcopy__social {
-  grid-column: 10/10;
-  grid-row: 2/2;
-}
-.footer-blockcopy__line {
-  width: 100%;
-  padding-bottom: 17px;
-  grid-column: 3/11;
-  grid-row: 1/1;
 }
 
 @media (min-width: 1008px) and (max-width: 1300px) {
@@ -184,10 +139,7 @@
       grid-column: 1/3;
       grid-row: 2/2;
     }
-    &__link-email {
-      grid-column: 1/3;
-      grid-row: 3/3;
-    }
+
     &__menu-heading-nav {
       grid-column: 4/6;
       grid-row: 1/1;
@@ -200,35 +152,6 @@
       grid-column: 6/8;
       grid-row: 1/1;
     }
-    &__img:nth-of-type(1) {
-      grid-column: 6/6;
-    }
-    &__img:nth-of-type(2) {
-      grid-column: 7/7;
-    }
-    &__img:nth-of-type(3) {
-      grid-column: 8/8;
-    }
-    &__img:nth-of-type(4) {
-      grid-column: 6/6;
-    }
-    &__img:nth-of-type(5) {
-      grid-column: 7/7;
-    }
-    &__img:nth-of-type(6) {
-      grid-column: 8/8;
-    }
-  }
-  .footer-blockcopy__text {
-    grid-column: 1/3;
-    grid-row: 2/2;
-  }
-  .footer-blockcopy__social {
-    grid-column: 8/8;
-    grid-row: 2/2;
-  }
-  .footer-blockcopy__line {
-    grid-column: 1/9;
   }
 }
 
@@ -242,11 +165,7 @@
       grid-column: 1/5;
       grid-row: 2/2;
     }
-    &__link-email {
-      grid-column: 1/5;
-      grid-row: 3/3;
-      margin-bottom: 20px;
-    }
+
     &__menu-heading-nav {
       grid-column: 1/5;
       grid-row: 4/4;
@@ -266,32 +185,5 @@
       grid-row: 6/6;
       margin-bottom: 5px;
     }
-    &__img:nth-of-type(1) {
-      grid-column: 1/1;
-    }
-    &__img:nth-of-type(2) {
-      grid-column: 2/2;
-    }
-    &__img:nth-of-type(3) {
-      grid-column: 3/3;
-    }
-    &__img:nth-of-type(4) {
-      grid-column: 1/1;
-    }
-    &__img:nth-of-type(5) {
-      grid-column: 2/2;
-    }
-    &__img:nth-of-type(6) {
-      grid-column: 3/3;
-    }
-  }
-  .footer-blockcopy__text {
-    grid-column: 1/3;
-  }
-  .footer-blockcopy__social {
-    grid-column: 4/4;
-  }
-  .footer-blockcopy__line {
-    grid-column: 1/5;
   }
 }
