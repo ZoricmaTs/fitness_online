@@ -1,10 +1,18 @@
 @import '@/assets/scss/variables.scss';
 .footer {
+  position: relative;
   margin-top: auto;
+}
+.footer-block__decorpoint {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
 }
 .footer-block {
   padding-top: 45px;
   padding-bottom: 23px;
+
   &__color_gray {
     background-color: #454545;
   }

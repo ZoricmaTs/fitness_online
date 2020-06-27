@@ -58,6 +58,15 @@
   cursor: pointer;
 }
 
+.title-img {
+  position: relative;
+  &__decor {
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+    z-index: 5;
+  }
+}
 //navbar----------------------------------------------------------------------
 .navb__auth {
   margin: auto 0;

@@ -94,6 +94,8 @@
         >fitness-online@fitness.com</span>
       </div>
     </section>
+    <img class="footer-block__decorpoint" src="../assets/img/decelfooter.svg" />
+    
   </footer>
 </template>
 

@@ -1,11 +1,19 @@
 @import '@/assets/scss/variables.scss';
 
 .home-page-stream {
+  // position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #454545;
+  // &__decor {
+  //   position: absolute;
+  //   left: 0;
+  //   top: -230px;
+  //   z-index: 5;
+  // }
+
   &__container {
     display: flex;
     flex-direction: column;

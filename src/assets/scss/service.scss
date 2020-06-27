@@ -1,5 +1,6 @@
 @import '@/assets/scss/variables.scss';
 .home-page-serv {
+  position: relative;
   background-color: #e9e9e9;
   color: #01120a;
   background-image: url('/assets/img/decelemserv.svg');
@@ -7,6 +8,18 @@
   background-position: top right;
   background-repeat: no-repeat;
   z-index: 3;
+  &__decor {
+    position: absolute;
+    right: 0;
+    top: -85px;
+    z-index: 5;
+  }
+  &__decorline {
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    z-index: 5;
+  }
   &__heading {
     display: block;
     text-align: center;

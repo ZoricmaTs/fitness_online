@@ -17,6 +17,8 @@
       </section>
     </section>
     <section class="home-page-serv" id="about-service">
+      <img class="home-page-serv__decor" src="../assets/img/deceltitle.svg" />
+      <img class="home-page-serv__decorline" src="../assets/img/decserv.svg" />
       <h1 class="home-page-serv__heading text__heading_size_h1">Тренируйся эффективнее с нами!</h1>
       <div class="home-page-serv__cards">
         <div class="home-page-serv__cardblock">
@@ -136,6 +138,7 @@
       <Slider />
     </div>
     <section class="home-page-seeschedules">
+      <img class="home-page-seeschedules__decorpoint" src="../assets/img/deceltitle.svg" />
       <h1 class="text__color_green text__heading_size_h1">
         Нет времени
         <span class="text__color_black">тренироваться сейчас?</span>
