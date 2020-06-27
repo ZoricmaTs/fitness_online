@@ -9,7 +9,8 @@
             :key="item"
             v-show="index === active"
           >
-            <img :src="item" width="500" height="250" />
+            <div class="nametaining text__heading_size_h3">{{ trainings[index] }}</div>
+            <img class="box-image" :src="item" width="500" height="250" />
           </li>
         </transition-group>
       </ul>
@@ -28,18 +29,13 @@
       @click="change(active + 1)"
     >arrow_forward_ios</span>
 
-    <!-- nav -->
-    <!-- <ul class="box-navs">
-      <li v-for="(item, index) in list" :key="item" class @click="change(index)">
-        <div class="circle" :class="{ active: active === index }"></div>
-      </li>
-    </ul>-->
-
     <VideoModal
       :showCloseCross="true"
       @close="openVideoModal = false"
       v-show="openVideoModal"
       :videoId="this.videos[this.active]"
+      :trainer="this.trainers[this.active]"
+      :nametrain="this.trainings[this.active]"
     />
   </div>
 </template>
@@ -55,12 +51,18 @@ export default {
         require('@/assets/img/videoprew1.jpg'),
         require('@/assets/img/videoprew1.jpg')
       ],
-      videos: ['2Rg7zXKXIjk', 'FJZeFdPwTQI', 'ryKlYPHk_Zs', 'SEPraMdV8_w'],
-      trainerss: [
-        'Татьяна Самсонова',
+      videos: ['2Rg7zXKXIjk', 'u5pQX-zbpJE', '4Js_JwUJQyY', 'n7NdXMqlgKE'],
+      trainers: [
+        'Лиза Майновская',
         'Алина Мронова',
-        'Геннадий Силович',
-        'Артур Пирожков'
+        'Арина и Дмитрий',
+        'Валерий Качалов'
+      ],
+      trainings: [
+        'стретчинг',
+        'калланетика',
+        'кардиотренировки',
+        'функциональная тренировка'
       ],
       active: 0,
       invert: false,
@@ -90,6 +92,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.box-image {
+  cursor: pointer;
+}
+.nametaining {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: normal;
+  text-align: center;
+  line-height: 33px;
+  background-color: #e9e9e9;
+  padding: 0 10px;
+  height: 33px;
+  vertical-align: middle;
+}
 .material-icons {
   color: #05ad5c;
 }
@@ -98,6 +115,12 @@ export default {
   position: relative;
   margin: 0 auto 0;
   width: 500px;
+  // &:hover,
+  // &:focus {
+  //   -webkit-transform: scale(1.05);
+  //   -ms-transform: scale(1.05);
+  //   transform: scale(1.05);
+  // }
 }
 .box-carousel {
   width: 100%;
@@ -106,7 +129,6 @@ export default {
     overflow-x: hidden;
     width: 100%;
     padding-top: percentage(250 / 500);
-    // width: 100%;
   }
   li {
     position: absolute;
@@ -127,11 +149,9 @@ export default {
   }
   &:hover,
   &:focus {
-    // background-color: #05ad5c;
-    // color: #ffffff;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
   }
 }
 .box-arrow-left {

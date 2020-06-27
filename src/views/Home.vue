@@ -75,7 +75,7 @@
         <div class="home-page-stream__block">
           <div class="home-page-stream__card card-training">
             <div class="card-training__nameblock">
-              <h1 class="card-training__name">Шейпинг</h1>
+              <h1 class="card-training__name">Калланетика</h1>
               <div class="card-training__trainer">
                 <div class="home-page-stream__card-trainerblock card-training__trainerblock">
                   <img
@@ -103,7 +103,13 @@
               >Расписание тренировок</router-link>
             </div>
           </div>
-          <youtube class="home-page-stream__current-video" video-id="Fl_AzkZ5Mtw" ref="youtube"></youtube>
+          <iframe
+            allowfullscreen
+            frameborder="0"
+            class="home-page-stream__current-video"
+            src="https://www.youtube-nocookie.com/embed/gv9sNnIBSNw?autoplay=0&amp;rel=0?modestbranding=1"
+          ></iframe>
+          <!-- <youtube class="home-page-stream__current-video" video-id="Fl_AzkZ5Mtw" ref="youtube"></youtube> -->
         </div>
         <h1 class="home-page-stream__headingtrain text__heading_size_h1">Записи тренировок</h1>
         <!-- <iframe
@@ -118,33 +124,11 @@
         <!-- <iframe
           allowfullscreen
           frameborder="0"
-          height="360"
+       class="home-page-stream__current-video"
           src="//www.youtube.com/embed/live_stream?channel=UCjXYQ1YhutGpzXvQJctzvAQ&autoplay=1"
-          width="640"
+
         ></iframe>-->
       </section>
-
-      <!-- <div class="reviews">
-        <VueSlickCarousel v-bind="settings" v-if="videoIds.length">
-          <youtube
-            class="carucel__video"
-            :video-id="item.videoId"
-            ref="youtube"
-            @playing="playing"
-            v-for="item in videoIds"
-            :key="item.videoId"
-          ></youtube>
-        </VueSlickCarousel>
-      </div>-->
-      <!-- <div class="reviews">
-        <VueSlickCarousel v-bind="settings" v-if="videoIds.length">
-          <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
-          <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
-          <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
-          <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
-          <video class="carucel__video" src="../assets/video.mp4" controls muted></video>
-        </VueSlickCarousel>
-      </div>-->
     </section>
     <div class="bg-color">
       <Slider />
@@ -168,11 +152,9 @@
 </template>
 
 <script>
-// import VueSlickCarousel from 'vue-slick-carousel'
 import Navbar from '@/components/Navbar.vue'
 import Footer from '@/components/Footer.vue'
 import Slider from '@/components/Slider.vue'
-// import ModalInfo from '@/components/ModalInfo.vue'
 
 export default {
   name: 'main-layout',
@@ -189,21 +171,21 @@ export default {
       },
       videoIds: [
         { videoId: '2Rg7zXKXIjk' }, //стретчинг
-        { videoId: 'FJZeFdPwTQI' },
-        { videoId: 'ryKlYPHk_Zs' },
-        { videoId: 'SEPraMdV8_w' }
+        { videoId: 'u5pQX-zbpJE' }, //йога
+        { videoId: '4Js_JwUJQyY' }, //кардио
+        { videoId: 'n7NdXMqlgKE' } //функциональная тренировка
       ],
       trainers: [
-        { trainer: 'Татьяна Самсонова' }, //стретчинг
+        { trainer: 'Лиза Майновская' }, //стретчинг
         { trainer: 'Алина Мронова' },
-        { trainer: 'Геннадий Силович' },
-        { trainer: 'Артур Пирожков' }
+        { trainer: 'Арина и Дмитрий' }, //
+        { trainer: 'Валерий Качалов' }
       ],
       trainings: [
         { nametrain: 'стретчинг' }, //стретчинг
         { nametrain: 'калланетика' },
-        { nametrain: 'йога' },
-        { nametrain: 'тренировочка' }
+        { nametrain: 'кардиотренировки' },
+        { nametrain: 'функциональная тренировка' }
       ],
       openVideoModal: false
     }
@@ -211,9 +193,7 @@ export default {
   components: {
     Navbar,
     Footer,
-    // VueSlickCarousel,
     Slider
-    // ModalInfo
   },
   methods: {
     playVideo() {

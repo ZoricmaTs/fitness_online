@@ -21,10 +21,10 @@
         </li>
       </ul>
     </nav>
-    <router-link class="grid-navb__exit exit-block" :to="{ name: 'signin' }">
+    <!-- <router-link class="grid-navb__exit exit-block" :to="{ name: 'signin' }">
       <div class="exit-block__text navb-none">Вход</div>
       <img class="exit-block__btn" src="../assets/img/exit-white.svg" />
-    </router-link>
+    </router-link>-->
   </header>
 </template>
 

@@ -17,10 +17,13 @@
   &__block {
     display: flex;
     flex-direction: row;
+    // max-height: 342px;
   }
+
   &__current-video {
     margin-left: 50px;
     width: 610px;
+    height: auto;
   }
   &__heading {
     position: relative;
@@ -45,6 +48,7 @@
     background-color: #ec5567;
   }
   &__card {
+    max-width: 370px;
   }
 }
 .card-training {
@@ -53,7 +57,7 @@
   color: #000000;
   font-weight: normal;
   background-color: #e9e9e9;
-  width: 280px;
+  // width: 0px;
   padding: 21px 45px 35px 45px;
   &__btnblock {
     display: flex;
@@ -93,100 +97,6 @@
   }
 }
 .slider-block {
-}
-/////// reviews//////
-
-.carucel__video {
-  margin-right: 30px;
-}
-///////slid
-
-.card-img-top {
-  width: 95px;
-  height: 95px;
-}
-
-.main__review {
-  color: white;
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 326px;
-  height: 182px;
-}
-////tests
-.slick-current > div > div {
-  background-color: #dee4e7 !important;
-  color: #333333 !important;
-}
-.slick-current > div > div > div > p {
-  color: #333333 !important;
-}
-
-///// button reviews
-.slick-track {
-  display: flex;
-  justify-content: center;
-}
-.slick-list {
-  overflow: hidden;
-}
-
-.slick-arrow {
-  position: absolute;
-  top: 45%;
-  z-index: 10;
-  font-size: 0;
-  width: 27px;
-  height: 27px;
-  padding: 0 !important;
-  border: none !important;
-  color: inherit !important;
-  background-color: transparent !important;
-  cursor: pointer !important;
-}
-
-/* Стрелка влево */
-.slick-arrow.slick-prev {
-  background: url('assets/img/left arrow.svg') 0 0 no-repeat;
-  left: 34%;
-}
-/* Стрелка вправо */
-.slick-arrow.slick-next {
-  right: 33%;
-  background: url('assets/img/right arrow.svg') 0 0 no-repeat;
-}
-
-/* Точки (булиты) */
-.slick-dots {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-.slick-dots li {
-  list-style: none;
-  margin: 0 15px;
-}
-/* Активная точка */
-.slick-dots li.slick-active button {
-  background: #cbff35 !important;
-}
-
-/* Элемент точки */
-.slick-dots li button {
-  margin-top: 50px;
-  padding: 0 !important;
-  border: none !important;
-  background-color: transparent !important;
-  font-size: 0;
-  width: 10px !important;
-  height: 10px !important;
-  border-radius: 50% !important;
-  background-color: white !important;
-}
-
-.main_reviews {
-  position: relative;
 }
 
 @media (min-width: 1008px) and (max-width: 1300px) {

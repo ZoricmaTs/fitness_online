@@ -11,7 +11,7 @@
       <div class="form-modal-info__text-block">
         <youtube class="card-training__trainerblock" :video-id="this.videoId" ref="youtube"></youtube>
         <div class="card-training__nameblock video-modal__nameblock">
-          <h1 class="card-training__name" :trainer="this.trainer">{{ this.trainer }}</h1>
+          <h1 class="card-training__name" :nametrain="this.nametrain">{{ this.nametrain }}</h1>
           <div class="card-training__trainer">
             <div class="home-page-stream__card-trainerblock card-training__trainerblock">
               <img
@@ -44,7 +44,8 @@ export default {
   },
   props: {
     videoId: { type: String, default: 'Fl_AzkZ5Mtw' },
-    trainer: { type: String, default: 'Стретчинг' }
+    nametrain: { type: String, default: '' },
+    trainer: { type: String }
   },
   methods: {
     onClose() {

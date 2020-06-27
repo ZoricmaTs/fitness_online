@@ -8,11 +8,14 @@
       <p class="footer-block__text">
         Сервис по подбору тренера и тренировок. Занятия и общение в онлайн
         режиме из любой точки планеты.
+        <br />
+        <br />
+        <span
+          href="#"
+          class="footer-block__link-email footer-block__link-email_color-team_gray text__heading_size_m"
+        >fitness-online@fitness.com</span>
       </p>
-      <p
-        href="#"
-        class="footer-block__link-email footer-block__link-email_color-team_gray text__heading_size_m"
-      >fitness-online@fitness.com</p>
+
       <!-- </div> -->
       <!-- <div class="footer-block__menu"> -->
       <p class="footer-block__menu-heading-nav footer-block__menu-heading">
