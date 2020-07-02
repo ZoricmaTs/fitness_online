@@ -1,21 +1,17 @@
 <template>
   <section class="page">
-    <section class="navb-block-title">
-      <Navbar />
-      <section class="title-img" id="title-home">
-        <div class="title-img-block grid">
-          <h1 class="text-title">
-            Тренируйся не выходя из
-            <span class="text-title__color_green">дома</span>
-          </h1>
-          <a
-            target="_blank"
-            href="https://discord.gg/9AH4dtn"
-            class="title-link btn__title btn__title_color_green btn__link"
-          >Приступить к тренировке</a>
-        </div>
-      </section>
-    </section>
+    <div class="navb-block-title">
+      <Navbar class="navb-block-title__navb" />
+      <div class="text-title">
+        Тренируйся не выходя из
+        <span class="text-title__color_green">дома</span>
+      </div>
+      <a
+        target="_blank"
+        href="https://discord.gg/9AH4dtn"
+        class="title-link btn__title btn__title_color_green btn__link"
+      >Приступить к тренировке</a>
+    </div>
     <section class="home-page-serv" id="about-service">
       <img class="home-page-serv__decor" src="../assets/img/deceltitle.svg" />
       <img class="home-page-serv__decorline" src="../assets/img/decserv.svg" />
@@ -83,7 +79,7 @@
                 <div class="home-page-stream__card-trainerblock card-training__trainerblock">
                   <img
                     class="home-page-stream__card-trainer-img card-training__trainerimg"
-                    src="../assets/img/avatar.png"
+                    src="../assets/img/avatarstream.jpg"
                     alt="avatar"
                     height="60"
                     width="60"
@@ -115,26 +111,10 @@
           ></iframe>
           <!-- <youtube class="home-page-stream__current-video" video-id="Fl_AzkZ5Mtw" ref="youtube"></youtube> -->
         </div>
-        <h1 class="home-page-stream__headingtrain text__heading_size_h1">Записи тренировок</h1>
-        <!-- <iframe
-          class="home-page-stream__current-video card-training__trainerblock"
-          frameborder="0"
-          height="360"
-          width="640"
-          src="https://www.youtube-nocookie.com/embed/cmsH6by2GAo?autoplay=0&amp;rel=0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>-->
-        <!-- <iframe
-          allowfullscreen
-          frameborder="0"
-       class="home-page-stream__current-video"
-          src="//www.youtube.com/embed/live_stream?channel=UCjXYQ1YhutGpzXvQJctzvAQ&autoplay=1"
-
-        ></iframe>-->
       </section>
     </section>
     <div class="bg-color">
+      <h1 class="home-page-stream__headingtrain text__heading_size_h1">Записи тренировок</h1>
       <Slider />
     </div>
     <section class="home-page-seeschedules">
@@ -165,15 +145,6 @@ export default {
   name: 'main-layout',
   data() {
     return {
-      settings: {
-        dots: true,
-        focusOnSelect: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        touchThreshold: 5
-      },
       videoIds: [
         { videoId: '2Rg7zXKXIjk' }, //стретчинг
         { videoId: 'u5pQX-zbpJE' }, //йога
@@ -182,7 +153,7 @@ export default {
       ],
       trainers: [
         { trainer: 'Лиза Майновская' }, //стретчинг
-        { trainer: 'Алина Мронова' },
+        { trainer: 'Александра Степанова' },
         { trainer: 'Арина и Дмитрий' }, //
         { trainer: 'Валерий Качалов' }
       ],
@@ -212,9 +183,20 @@ export default {
   created() {},
 
   mounted() {
-    // add a id to the div we want to bring in foucs
-    // and id and the id is paased the query params
-    document.getElementById(this.$route.query.show).scrollIntoView()
+    // var img = new Image()
+    // img.onload = function() {
+    //   $('.navb-block-title').css('width', this.width + 'px')
+    //   // $('.navb-block-title').css('height', this.height + 'px')
+    // }
+    // img.src = $('.navb-block-title').css('background-image')
+    //     	$(function() {
+    //   var url = "https://s.poembook.ru/theme/a9/c9/09/8393d39722f905841f4dc46d8c4e7babb1f9e067.jpeg";
+    //   var img = new Image;
+    //   img.onload = function() {
+    //   $(".navb-block-title").height(this.height);
+    // };
+    //   img.src = url;
+    // });
   },
   computed: {
     player() {

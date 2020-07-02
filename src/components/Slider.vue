@@ -33,6 +33,7 @@
       :videoId="this.videos[this.active]"
       :trainer="this.trainers[this.active]"
       :nametrain="this.trainings[this.active]"
+      :avatar="this.avatar[this.active]"
     />
   </div>
 </template>
@@ -48,10 +49,17 @@ export default {
         require('@/assets/img/videoprew1.jpg'),
         require('@/assets/img/videoprew1.jpg')
       ],
+      avatar: [
+        require('@/assets/img/avatarv1.jpg'),
+        require('@/assets/img/avatarv2.jpg'),
+        require('@/assets/img/avatarv3.jpg'),
+        require('@/assets/img/avatarv4.jpg')
+      ],
+
       videos: ['2Rg7zXKXIjk', 'u5pQX-zbpJE', '4Js_JwUJQyY', 'n7NdXMqlgKE'],
       trainers: [
         'Лиза Майновская',
-        'Алина Мронова',
+        'Александра Степанова',
         'Арина и Дмитрий',
         'Валерий Качалов'
       ],

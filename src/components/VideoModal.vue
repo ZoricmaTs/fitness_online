@@ -16,11 +16,12 @@
             <div class="home-page-stream__card-trainerblock card-training__trainerblock">
               <img
                 class="home-page-stream__card-trainer-img card-training__trainerimg"
-                src="../assets/img/avatar.png"
+                :src="avatar"
                 alt="avatar"
                 height="60"
                 width="60"
               />
+              <!-- src="../assets/img/avatar.png" -->
               <p class="card-training__text">
                 Тренер
                 <span
@@ -45,7 +46,8 @@ export default {
   props: {
     videoId: { type: String, default: 'Fl_AzkZ5Mtw' },
     nametrain: { type: String, default: '' },
-    trainer: { type: String }
+    trainer: { type: String },
+    avatar: { type: String }
   },
   methods: {
     onClose() {

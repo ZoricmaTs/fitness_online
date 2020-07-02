@@ -1,12 +1,24 @@
 <template>
-  <header class="grid">
-    <div class="grid-navb__logo">
-      <router-link :to="{ name: 'home' }" class="logo__navb">
-        <img class="logo__img" src="../assets/img/logo-header.svg" />
-      </router-link>
+  <header class="navbblock">
+    <input class="navbblock__checkbox" type="checkbox" id="nav-check" />
+    <router-link :to="{ name: 'home' }" class="logo__navb">
+      <img class="logo__img" src="../assets/img/logo-header.svg" />
+    </router-link>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
     </div>
-    <nav class="grid-navb__navb navb">
-      <ul class="navb__list">
+    <nav class="nav-links">
+      <a href="/?show=about-service" class="navb__link">О сервисе</a>
+      <a href="/?show=trainings" class="navb__link">Тренировки</a>
+      <router-link class="navb__link" :to="{ name: 'schedule' }">Расписание</router-link>
+      <a href="#footer" class="navb__link">Контакты</a>
+      <a class="navb__link" :to="{ name: 'signin' }">Вход</a>
+
+      <!-- <ul class="navb__list">
         <li class="navb__item">
           <a href="/?show=about-service" class="navb__link">О сервисе</a>
         </li>
@@ -14,17 +26,21 @@
           <a href="/?show=trainings" class="navb__link">Тренировки</a>
         </li>
         <li class="navb__item">
-          <router-link class="navb__link" :to="{ name: 'schedule' }">Расписание</router-link>
+          <router-link class="navb__link" :to="{ name: 'schedule' }"
+            >Расписание</router-link
+          >
         </li>
         <li class="navb__item">
           <a href="#footer" class="navb__link">Контакты</a>
         </li>
-      </ul>
+        <li class="navb__item">
+          <a class="exit-block navb__link" :to="{ name: 'signin' }">
+            <div class="exit-block__text">Вход</div>
+            <img class="exit-block__btn" src="../assets/img/exit-white.svg" />
+          </a>
+        </li>
+      </ul>-->
     </nav>
-    <!-- <router-link class="grid-navb__exit exit-block" :to="{ name: 'signin' }">
-      <div class="exit-block__text navb-none">Вход</div>
-      <img class="exit-block__btn" src="../assets/img/exit-white.svg" />
-    </router-link>-->
   </header>
 </template>
 
